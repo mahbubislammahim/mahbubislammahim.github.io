@@ -24,10 +24,11 @@ export default function Experience() {
             
             <div className={styles.experienceContent}>
               <p className={styles.description}>
-                Working in collaboration with Oxford Semantic Technologies on intelligent knowledge graph systems that help organizations make sense of their data. 
+                Following Samsung Electronics' acquisition of Oxford Semantic Technologies in 2024, I now work directly within Samsung's integrated AI ecosystem on intelligent knowledge graph systems that help organizations make sense of their data. 
                 I contribute to building semantic platforms that transform scattered information into structured, 
                 queryable knowledge, enabling better decision-making and insights across enterprise environments.
-                Currently leading the development of a key module within the platform.
+                I am currently leading the development of a key module within the platform in collaboration with Oxford Semantic Technologies, using RDFox's cutting-edge reasoning capabilities 
+                to power Samsung's next-generation knowledge-based AI applications.
               </p>
             </div>
           </div>

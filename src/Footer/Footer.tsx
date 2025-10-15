@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.content}>
         <div className={styles.socialLinks}>
-          <a href="https://github.com/MAHIM-JU-CSE" target="_blank" rel="noopener noreferrer" className={styles.iconLink}>
+          <a href="https://github.com/mahim-samsung" target="_blank" rel="noopener noreferrer" className={styles.iconLink}>
             <GitHub />
           </a>
           <a href="https://www.linkedin.com/in/mahbub-islam-mahim-4634a5154/" target="_blank" rel="noopener noreferrer" className={styles.iconLink}>

@@ -43,7 +43,6 @@
   padding: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
 }
@@ -56,16 +55,6 @@
   width: 3px;
   height: 100%;
   background: #4d94c4;
-  transition: width 0.3s ease;
-}
-
-.achievementItem:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.achievementItem:hover::before {
-  width: 5px;
 }
 
 .achievementHeader {
@@ -156,7 +145,12 @@
 .profileLink:hover {
   background: rgba(77, 148, 196, 0.15);
   border-color: rgba(77, 148, 196, 0.3);
-  transform: translateY(-1px);
+  transform: translateY(-2px) scale(1.05);
+}
+
+.profileLink:active {
+  transform: translateY(-1px) scale(1.02);
+  transition: all 0.1s ease;
 }
 
 .teams {
@@ -213,12 +207,6 @@
   padding: 10px;
   background: rgba(77, 148, 196, 0.05);
   border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-.statItem:hover {
-  background: rgba(77, 148, 196, 0.1);
-  transform: translateY(-1px);
 }
 
 .statValue {

@@ -105,6 +105,7 @@ export default function Appbar() {
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
+              className={styles.menuButton}
               sx={{ mr: 2, display: { sm: "none" }, color: "#2b2b2b" }}
             >
               <MenuIcon />

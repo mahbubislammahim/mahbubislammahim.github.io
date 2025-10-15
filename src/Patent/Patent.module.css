@@ -32,7 +32,6 @@
   padding: 30px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
 }
@@ -45,16 +44,6 @@
   width: 4px;
   height: 100%;
   background: #4d94c4;
-  transition: width 0.3s ease;
-}
-
-.patentCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-}
-
-.patentCard:hover::before {
-  width: 6px;
 }
 
 .patentHeader {
@@ -74,11 +63,6 @@
   width: 70px;
   height: 70px;
   object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-.patentSealImage:hover {
-  transform: scale(1.05);
 }
 
 .patentMeta {
@@ -144,12 +128,7 @@
   color: #2c3e50;
   margin: 0;
   line-height: 1.4;
-  transition: color 0.3s ease;
   flex: 1;
-}
-
-.patentCard:hover .patentTitle {
-  color: #4d94c4;
 }
 
 .patentDescription {
@@ -170,13 +149,6 @@
   border-radius: 6px;
   background: rgba(77, 148, 196, 0.1);
   border: 1px solid rgba(77, 148, 196, 0.2);
-  transition: all 0.3s ease;
-}
-
-.viewPatentLink:hover {
-  background: rgba(77, 148, 196, 0.15);
-  border-color: rgba(77, 148, 196, 0.3);
-  transform: translateY(-1px);
 }
 
 

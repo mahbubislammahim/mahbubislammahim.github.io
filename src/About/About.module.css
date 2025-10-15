@@ -62,9 +62,9 @@
 }
 
 .company:hover {
-  transition: color 0.6s ease;
+  transition: all 0.3s ease;
   color: #2962ff;
-
+  transform: translateY(-1px);
 }
 
 .rightCol {
@@ -93,38 +93,42 @@
 
 .degree1 {
   color: #2e48a3;
-  transition: color 0.6s ease;
+  transition: all 0.3s ease;
 }
 
 .degree1:hover {
   color: #2962ff;
+  transform: translateY(-1px);
 }
 
 .degree2 {
   color: #2e48a3;
-  transition: color 0.6s ease;
+  transition: all 0.3s ease;
 }
 
 .degree2:hover {
   color: #2962ff;
+  transform: translateY(-1px);
 }
 
 .degree3 {
   color: #2e48a3;
-  transition: color 0.6s ease;
+  transition: all 0.3s ease;
 }
 
 .degree3:hover {
   color: #2962ff;
+  transform: translateY(-1px);
 }
 
 .degree4 {
   color: #2e48a3;
-  transition: color 0.6s ease;
+  transition: all 0.3s ease;
 }
 
 .degree4:hover {
   color: #2962ff;
+  transform: translateY(-1px);
 }
 
 .bigIconGroup {
@@ -136,14 +140,24 @@
 .bigIcon {
   font-size: 2rem;
   color: #4d94c4;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: all 0.3s ease;
   margin: 0 8px;
   position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  padding: 8px;
 }
 
 .bigIcon:hover {
-  transform: scale(1.2);
+  transform: scale(1.2) translateY(-2px);
   color: #2e48a3;
+  background-color: rgba(46, 72, 163, 0.1);
+  box-shadow: 0 4px 12px rgba(46, 72, 163, 0.3);
+}
+
+.bigIcon:active {
+  transform: scale(1.1) translateY(-1px);
+  transition: all 0.1s ease;
 }
 
 .bigIcon::after {
@@ -204,15 +218,9 @@
   border-radius: 6px;
   padding: 8px;
   border-left: 3px solid #4d94c4;
-  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-.interestItem:hover {
-  background: #f0f2f5;
-  transform: translateX(2px);
 }
 
 .interestItem i {
@@ -252,13 +260,7 @@
   border-radius: 6px;
   padding: 10px;
   border-left: 3px solid #4d94c4;
-  transition: all 0.3s ease;
   min-height: 60px;
-}
-
-.educationItem:hover {
-  background: #f0f2f5;
-  transform: translateX(2px);
 }
 
 .educationHeader {

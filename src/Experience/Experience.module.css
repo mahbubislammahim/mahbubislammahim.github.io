@@ -34,7 +34,6 @@
   padding: 30px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
 }
@@ -47,16 +46,6 @@
   width: 4px;
   height: 100%;
   background: #4d94c4;
-  transition: width 0.3s ease;
-}
-
-.experienceCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-}
-
-.experienceCard:hover::before {
-  width: 6px;
 }
 
 .experienceHeader {
@@ -126,7 +115,6 @@
   color: #4d94c4;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
 }
 
 .link:hover {
@@ -150,19 +138,13 @@
 }
 
 .highlight {
-  display: flex;
+  display: flex;  
   align-items: center;
   gap: 12px;
   padding: 12px 16px;
   background: rgba(77, 148, 196, 0.05);
   border-radius: 8px;
   border-left: 4px solid #4d94c4;
-  transition: all 0.3s ease;
-}
-
-.highlight:hover {
-  background: rgba(77, 148, 196, 0.1);
-  transform: translateX(5px);
 }
 
 .highlightIcon {
@@ -194,12 +176,6 @@
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.techTag:hover {
-  background: #2e48a3;
-  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
