@@ -1,5 +1,6 @@
 'use client';
 
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import styles from './Research.module.css';
 
 export default function Research() {
@@ -7,11 +8,11 @@ export default function Research() {
     {
       id: 1,
       title: "Divide and Conquer: A Two-Stage Cascaded Framework with K-Fold Ensembling for Multi-Label Bangla Hate Speech Classification",
-      conference: "BLP Shared Task 1 @ AACL-IJCNLP 2025",
+      conference: "Proceedings of the Second Workshop on Bangla Language Processing (BLP-2025), ACL Anthology",
       type: "Conference Paper",
-      description: "Designed a label-wise cascaded pipeline where each label is first classified using a binary model and then refined with a multiclass model, with k-fold cross-validation and intra-label ensembling. Became <strong>CHAMPION</strong> in the workshop contest and currently writing for <strong>BEST PAPER</strong> award.",
-      link: "https://multihate.github.io/#eval_leaderboard",
-      icon: "🏆"
+      description: "Published at BLP-2025 (ACL Anthology). Designed a two-stage cascaded framework with k-fold ensembling for multi-label Bangla hate speech classification, becoming champion of the shared-task and receiving the <strong>Best Paper Award</strong>.",
+      link: "https://aclanthology.org/2025.banglalp-1.39/",
+      iconClass: "fas fa-award",
     },
     {
       id: 2,
@@ -20,7 +21,7 @@ export default function Research() {
       type: "Journal Article",
       description: "A comprehensive comparison of a memory-efficient fine-tuning method that combines quantization and LoRA on LLaMA-2 7B using the CodeAlpaca-20k dataset, reducing GPU memory usage from 112 GB to 10.8 GB without sacrificing performance, thereby enabling low-resource LLM deployment in real-world applications such as coding assistants.",
       link: "https://ecs.ju-journal.org/jujecs/article/view/38",
-      icon: "📝"
+      iconClass: "fas fa-book",
     },
     {
       id: 3,
@@ -29,7 +30,7 @@ export default function Research() {
       type: "Preprint",
       description: "Developed a GAN-based approach to enhance wide-angle images by fusing fine details from co-captured narrow-angle views, leveraging attention-based feature integration to improve visual fidelity.",
       link: "https://arxiv.org/abs/2504.09455",
-      icon: "📝"
+      iconClass: "fas fa-file-alt",
     },
  
   ];
@@ -78,7 +79,10 @@ export default function Research() {
               className={styles.publicationCard}
             >
               <div className={styles.publicationHeader}>
-                <span className={styles.publicationIcon}>{publication.icon}</span>
+                <i
+                  className={`${styles.publicationIcon} ${publication.iconClass}`}
+                  aria-hidden
+                />
                 <h3 className={styles.publicationTitle}>
                   {publication.title}
                 </h3>

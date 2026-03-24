@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 export const siteConfig = {
   name: "Mahbub Islam Mahim",
+  /** ISO date (YYYY-MM-DD). Bump when you publish meaningful site updates. */
+  lastUpdated: "2026-03-24",
   title: "Mahbub Islam Mahim - Software Engineer | Samsung Research",
   description: "Software Engineer at Samsung Research specializing in Knowledge Graphs, Machine Learning, and AI. Award-winning researcher with A1-grade patent and publications in top-tier conferences.",
   url: "https://mahbubislammahim.github.io/mahim/",
@@ -32,6 +34,18 @@ export const siteConfig = {
     "Trustworthy AI"
   ]
 };
+
+export function formatSiteLastUpdated(isoDate: string): string {
+  const parts = isoDate.split("-").map(Number);
+  if (parts.length !== 3 || parts.some(Number.isNaN)) return isoDate;
+  const [y, m, d] = parts;
+  const date = new Date(y, m - 1, d);
+  return new Intl.DateTimeFormat("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  }).format(date);
+}
 
 export const defaultMetadata: Metadata = {
   title: {

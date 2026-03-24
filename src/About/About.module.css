@@ -137,19 +137,27 @@
   justify-content: center;
 }
 
+.lastUpdated {
+  margin: 14px 0 0;
+  font-size: 0.78rem;
+  color: rgba(0, 0, 0, 0.45);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
 .bigIcon {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #4d94c4;
   transition: all 0.3s ease;
-  margin: 0 8px;
+  margin: 0 6px;
   position: relative;
   display: inline-block;
   border-radius: 50%;
-  padding: 8px;
+  padding: 6px;
 }
 
 .bigIcon:hover {
-  transform: scale(1.2) translateY(-2px);
+  transform: scale(1.1) translateY(-2px);
   color: #2e48a3;
   background-color: rgba(46, 72, 163, 0.1);
   box-shadow: 0 4px 12px rgba(46, 72, 163, 0.3);
@@ -464,7 +472,12 @@
   }
 
   .bigIcon {
-    font-size: 1.5rem;
-    margin: 0 6px;
+    font-size: 1.25rem;
+    margin: 0 5px;
+    padding: 5px;
+  }
+
+  .lastUpdated {
+    font-size: 0.74rem;
   }
 }

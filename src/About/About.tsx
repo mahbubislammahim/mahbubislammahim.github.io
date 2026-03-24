@@ -1,5 +1,6 @@
 import React from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { siteConfig, formatSiteLastUpdated } from "@/app/metadata";
 import styles from "./About.module.css";
 
 export default function About() {
@@ -62,17 +63,31 @@ export default function About() {
                   </a>
 
                   <a
-                    href="/Mahim_Resume.pdf"
+                    href="/Mahbub_Islam_Mahim_Resume.pdf"
                     download="Mahbub_Islam_Mahim_Resume.pdf"
-                    target="_blank"
-                    rel="noopener"
                   >
                     <i
                       className={`fas fa-file-alt ${styles.bigIcon}`}
                       data-tooltip="Resume"
                     />
                   </a>
+
+                  <a
+                    href="https://www.facebook.com/mahimmahbubislam"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i
+                      className={`fab fa-facebook ${styles.bigIcon}`}
+                      data-tooltip="Facebook profile"
+                    />
+                  </a>
                 </div>
+                <p className={styles.lastUpdated}>
+                  <time dateTime={siteConfig.lastUpdated}>
+                    Last updated {formatSiteLastUpdated(siteConfig.lastUpdated)}
+                  </time>
+                </p>
               </div>
             </div>
           </div>

@@ -6,23 +6,32 @@ export default function Awards() {
   const awards = [
     {
       id: 1,
+      icon: "🏆",
+      title: "Best Paper Award",
+      period: "Dec 2025",
+      organization: "BLP-2025 (ACL Anthology)",
+      color: "gold",
+      certificateLink: "https://drive.google.com/file/d/1p9GzMcidLKjRpMSxoiUXQHxjY0sKD_-Z/view?usp=sharing"
+    },
+    {
+      id: 2,
       icon: "⭐",
       title: "Icon Engineer",
       period: "Jul-Aug 2025",
       organization: "Samsung",
-      color: "gold",
+      color: "orange",
     },
     {
-      id: 2,
+      id: 3,
       icon: "🏅",
       title: "Icon Engineer",
       period: "Nov-Dec 2024",
       organization: "Samsung",
-      color: "orange",
+      color: "blue",
       certificateLink: "https://drive.google.com/file/d/1llMk7BYPFn99UENl2npVpzJQYkP_ty7j/view?usp=sharing"
     },
     {
-      id: 3,
+      id: 4,
       icon: "💡",
       title: "Recognition in Innovation",
       period: "2024",
@@ -31,7 +40,7 @@ export default function Awards() {
       certificateLink: "https://drive.google.com/file/d/1bqoWcE3ArrV-YnThYtcsP0KZBrQ_djWQ/view?usp=sharing"
     },
     {
-      id: 4,
+      id: 5,
       icon: "💻",
       title: "Professional Software Coding Certification",
       period: "Aug 2023",
@@ -40,7 +49,7 @@ export default function Awards() {
       certificateLink: "https://drive.google.com/file/d/1KENS-TVmoFbjA9Uu9H743KIt-DgV9Gan/view?usp=sharing"
     },
     {
-      id: 5,
+      id: 6,
       icon: "🥉",
       title: "Bronze Medal",
       period: "2021",

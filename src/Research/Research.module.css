@@ -70,9 +70,11 @@
 }
 
 .publicationIcon {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   flex-shrink: 0;
   margin-top: 2px;
+  color: #4d94c4;
+  line-height: 1;
 }
 
 .publicationMeta {

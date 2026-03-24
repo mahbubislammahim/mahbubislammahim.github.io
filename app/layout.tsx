@@ -8,6 +8,7 @@ const geistSans = GeistSans;
 const geistMono = GeistMono;
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mahbubislammahim.github.io"),
   title: {
     default: "Mahbub Islam Mahim - Software Engineer | Samsung Research",
     template: "%s | Mahbub Islam Mahim"
@@ -67,9 +68,6 @@ export const metadata: Metadata = {
     images: ['/profile.jpeg'],
     creator: '@mahbubislammahim',
   },
-  verification: {
-    google: 'your-google-verification-code', // Replace with actual verification code
-  },
   alternates: {
     canonical: 'https://mahbubislammahim.github.io/mahim/',
   },
@@ -115,7 +113,8 @@ export default function RootLayout({
               "image": "https://mahbubislammahim.github.io/mahim/profile.jpeg",
               "sameAs": [
                 "https://github.com/MAHIM-JU-CSE",
-                "https://www.linkedin.com/in/mahbub-islam-mahim-4634a5154/"
+                "https://www.linkedin.com/in/mahbub-islam-mahim-4634a5154/",
+                "https://www.facebook.com/mahimmahbubislam"
               ],
               "knowsAbout": [
                 "Machine Learning",
