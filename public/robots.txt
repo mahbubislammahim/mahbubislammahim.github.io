@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://mahbubislammahim.github.io/mahim/sitemap.xml
+Sitemap: https://mahbubislammahim.github.io/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1

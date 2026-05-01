@@ -6,8 +6,8 @@ export const siteConfig = {
   lastUpdated: "2026-03-24",
   title: "Mahbub Islam Mahim - Software Engineer | Samsung Research",
   description: "Software Engineer at Samsung Research specializing in Knowledge Graphs, Machine Learning, and AI. Award-winning researcher with A1-grade patent and publications in top-tier conferences.",
-  url: "https://mahbubislammahim.github.io/mahim/",
-  ogImage: "https://mahbubislammahim.github.io/mahim/profile.jpeg",
+  url: "https://mahbubislammahim.github.io/",
+  ogImage: "https://mahbubislammahim.github.io/profile.jpeg",
   links: {
     github: "https://github.com/MAHIM-JU-CSE",
     linkedin: "https://www.linkedin.com/in/mahbub-islam-mahim-4634a5154/",

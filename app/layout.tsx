@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://mahbubislammahim.github.io/mahim/',
+    url: 'https://mahbubislammahim.github.io/',
     siteName: 'Mahbub Islam Mahim',
     title: 'Mahbub Islam Mahim - Software Engineer | Samsung Research',
     description: 'Software Engineer at Samsung Research specializing in Knowledge Graphs, Machine Learning, and AI. Award-winning researcher with A1-grade patent and publications in top-tier conferences.',
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     creator: '@mahbubislammahim',
   },
   alternates: {
-    canonical: 'https://mahbubislammahim.github.io/mahim/',
+    canonical: 'https://mahbubislammahim.github.io/',
   },
   icons: {
     icon: [
@@ -109,8 +109,8 @@ export default function RootLayout({
                 "url": "https://juniv.edu/"
               },
               "email": "mahbubislammahim@gmail.com",
-              "url": "https://mahbubislammahim.github.io/mahim/",
-              "image": "https://mahbubislammahim.github.io/mahim/profile.jpeg",
+              "url": "https://mahbubislammahim.github.io/",
+              "image": "https://mahbubislammahim.github.io/profile.jpeg",
               "sameAs": [
                 "https://github.com/MAHIM-JU-CSE",
                 "https://www.linkedin.com/in/mahbub-islam-mahim-4634a5154/",

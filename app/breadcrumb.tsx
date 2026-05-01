@@ -12,25 +12,25 @@ export default function Breadcrumb() {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://mahbubislammahim.github.io/mahim/"
+          "item": "https://mahbubislammahim.github.io/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "About",
-          "item": "https://mahbubislammahim.github.io/mahim/#about"
+          "item": "https://mahbubislammahim.github.io/#about"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Experience",
-          "item": "https://mahbubislammahim.github.io/mahim/#experience"
+          "item": "https://mahbubislammahim.github.io/#experience"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "Research",
-          "item": "https://mahbubislammahim.github.io/mahim/#research"
+          "item": "https://mahbubislammahim.github.io/#research"
         }
       ]
     };
