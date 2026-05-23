@@ -1,35 +1,106 @@
 import React from "react";
-
 import styles from "./Experience.module.css";
 
 export default function Experience() {
   return (
     <div className={styles.outer}>
       <div className={styles.inner}>
-        <h1 className={styles.title}>
-          Experience
-        </h1>
-        
-        <div className={styles.experienceContainer}>
-          <div className={styles.experienceCard}>
-            <div className={styles.experienceHeader}>
-              <div className={styles.experienceInfo}>
-                <h3 className={styles.designation}>Senior Software Engineer</h3>
-                <div className={styles.company}>
-                  Samsung R&D Institute Bangladesh
-                </div>
-                <div className={styles.duration}>April 2023 - Present</div>
+        <h1 className={styles.title}>Experience</h1>
+
+        <div className={styles.card}>
+          {/* Wayne State University */}
+          <div className={styles.companyGroup}>
+            <div className={styles.companyHeader}>
+              <div className={styles.companyIcon}>
+                <img src="./WSU.png" alt="Wayne State University" className={styles.companyLogo} />
+              </div>
+              <div className={styles.companyInfo}>
+                <h2 className={styles.companyName}>Wayne State University</h2>
+                <span className={styles.companyDuration}>Aug 2026 – Present · <a href="https://gradschool.wayne.edu/students/funding/fellowships#rumble" target="_blank" rel="noopener noreferrer" className={styles.link}>Rumble Fellow</a></span>
               </div>
             </div>
-            
-            <div className={styles.experienceContent}>
-              <p className={styles.description}>
-                Following Samsung Electronics' acquisition of Oxford Semantic Technologies in 2024, I now work directly within Samsung's integrated AI ecosystem on intelligent knowledge graph systems that help organizations make sense of their data. 
-                I contribute to building semantic platforms that transform scattered information into structured, 
-                queryable knowledge, enabling better decision-making and insights across enterprise environments.
-                I am currently leading the development of a key module within the platform in collaboration with Oxford Semantic Technologies, using RDFox's cutting-edge reasoning capabilities 
-                to power Samsung's next-generation knowledge-based AI applications.
-              </p>
+
+            <div className={styles.rolesContainer}>
+              <div className={styles.roleItem}>
+                <div className={styles.roleConnector}>
+                  <div className={styles.roleDot} />
+                  <div className={styles.roleLine} />
+                </div>
+                <div className={styles.roleContent}>
+                  <div className={styles.roleHeader}>
+                    <h3 className={styles.roleTitle}>Research Fellow</h3>
+                    <span className={styles.roleDuration}>Aug 2026 – Present</span>
+                  </div>
+                  <p className={styles.roleDescription}>
+                    Conducting research in the <a href="https://sites.google.com/view/mlpa/mainpage" target="_blank" rel="noopener noreferrer" className={styles.link}>Trustworthy AI Lab</a>, focusing on
+                    developing reliable and interpretable AI systems. Advised by
+                    <a href="https://dongxiaozhu.github.io/index.html" target="_blank" rel="noopener noreferrer" className={styles.link}> Prof. Dongxiao Zhu</a>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.divider} />
+
+          {/* Samsung R&D Institute Bangladesh */}
+          <div className={styles.companyGroup}>
+            <div className={styles.companyHeader}>
+              <div className={styles.companyIcon}>
+                <img src="./samsung-logo.svg" alt="Samsung" className={styles.companyLogo} />
+              </div>
+              <div className={styles.companyInfo}>
+                <h2 className={styles.companyName}>
+                  Samsung R&D Institute Bangladesh
+                </h2>
+                <span className={styles.companyDuration}>
+                  Apr 2023 – Jul 2026 · 3 yrs 4 mos
+                </span>
+              </div>
+            </div>
+
+            <div className={styles.rolesContainer}>
+              <div className={styles.roleItem}>
+                <div className={styles.roleConnector}>
+                  <div className={styles.roleDot} />
+                  <div className={styles.roleLine} />
+                </div>
+                <div className={styles.roleContent}>
+                  <div className={styles.roleHeader}>
+                    <h3 className={styles.roleTitle}>
+                      Senior Software Engineer
+                    </h3>
+                    <span className={styles.roleDuration}>
+                      Apr 2025 – Jul 2026
+                    </span>
+                  </div>
+                  <p className={styles.roleDescription}>
+                    Led the development of a key module within Samsung's
+                    knowledge graph platform in collaboration with Oxford Semantic
+                    Technologies, leveraging RDFox's reasoning engine to power
+                    enterprise AI applications.
+                  </p>
+                </div>
+              </div>
+
+              <div className={styles.roleItem}>
+                <div className={styles.roleConnector}>
+                  <div className={styles.roleDot} />
+                </div>
+                <div className={styles.roleContent}>
+                  <div className={styles.roleHeader}>
+                    <h3 className={styles.roleTitle}>Software Engineer</h3>
+                    <span className={styles.roleDuration}>
+                      Apr 2023 – Mar 2025
+                    </span>
+                  </div>
+                  <p className={styles.roleDescription}>
+                    Built semantic knowledge graph tools and reasoning systems as
+                    part of Samsung's integrated AI ecosystem, contributing to
+                    the development of an A1-grade patented technology.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

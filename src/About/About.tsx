@@ -19,19 +19,19 @@ export default function About() {
             <div className={styles.profile}>
               <img
                 src="./prof_pic.png"
-                alt="Mahbub Islam Mahim - Software Engineer at Samsung Research"
+                alt="Mahbub Islam Mahim - Research Fellow at Wayne State University"
                 className={styles.image}
               />
               <div>
                 <h2 className={styles.name}>Mahbub Islam Mahim</h2>
-                <h3 className={styles.title}>Software Engineer</h3>
+                <h3 className={styles.title}>Research Fellow</h3>
                 <h3 className={styles.company}>
                   <a
-                    href="https://research.samsung.com/srbd"
+                    href="https://wayne.edu/"
                     target="_blank"
                     rel="noopener"
                   >
-                    <span>Samsung R&D Institute Bangladesh</span>
+                    <span>Wayne State University</span>
                   </a>
                 </h3>
 
@@ -105,7 +105,16 @@ export default function About() {
           <div className={styles.rightCol}>
             <div className={styles.aboutText}>
               <p className={styles.p}>
-                Hi, I’m Mahbub Islam Mahim, a Software Engineer at{" "}
+                Hi, I'm Mahbub Islam Mahim, a Research Fellow at{" "}
+                <a
+                  href="https://wayne.edu/"
+                  target="_blank"
+                  style={{ color: "#2e48a3" }}
+                >
+                  Wayne State University
+                </a>
+                , where I research trustworthy AI and advanced machine learning.
+                Previously, I was a Senior Software Engineer at{" "}
                 <a
                   href="https://research.samsung.com/srbd"
                   target="_blank"
@@ -113,8 +122,7 @@ export default function About() {
                 >
                   Samsung Research
                 </a>
-                , where I work on knowledge graphs and reasoning systems,
-                developing a Knowledge Graph build tool using the{" "}
+                , where I built knowledge graph and reasoning systems using the{" "}
                 <a
                   href="https://www.oxfordsemantic.tech/rdfox"
                   target="_blank"
@@ -129,7 +137,7 @@ export default function About() {
                   style={{ color: "#2e48a3" }}
                 >
                   Oxford Semantic Technologies
-                </a>{" "}
+                </a>
                 , UK.
               </p>
               <br />
@@ -161,28 +169,13 @@ export default function About() {
             <div className={styles.aboutRow}>
               <div className={styles.interest}>
                 <div className={styles.heading}>Interests</div>
-                <div className={styles.interestList}>
-                  <div className={styles.interestItem}>
-                    <i className="fas fa-brain" />
-                    <span>Advanced Machine Learning</span>
-                  </div>
-                  <div className={styles.interestItem}>
-                    <i className="fas fa-robot" />
-                    <span>Generative AI</span>
-                  </div>
-                  <div className={styles.interestItem}>
-                    <i className="fas fa-shield-alt" />
-                    <span>Trustworthy and efficient AI</span>
-                  </div>
-                  <div className={styles.interestItem}>
-                    <i className="fas fa-project-diagram" />
-                    <span>Knowledge graph, Semantic reasoning</span>
-                  </div>
-                  <div className={styles.interestItem}>
-                    <i className="fas fa-code" />
-                    <span>Software Engineering</span>
-                  </div>
-                </div>
+                <ul className={styles.interestList}>
+                  <li>Trustworthy AI</li>
+                  <li>Advanced Machine Learning</li>
+                  <li>Generative AI</li>
+                  <li>Knowledge Graph & Semantic Reasoning</li>
+                  <li>Software Engineering</li>
+                </ul>
               </div>
               <div className={styles.education}>
                 <div className={styles.heading}>Education</div>
@@ -200,8 +193,9 @@ export default function About() {
                         <div className={styles.year}>2023</div>
                       </div>
                     </div>
-                    <div className={styles.gpa}>CGPA: 3.83/4.00</div>
                   </div>
+
+                  <div className={styles.educationDivider} />
 
                   <div className={styles.educationItem}>
                     <div className={styles.educationHeader}>
@@ -216,7 +210,6 @@ export default function About() {
                         <div className={styles.year}>2021</div>
                       </div>
                     </div>
-                    <div className={styles.gpa}>CGPA: 3.69/4.00</div>
                   </div>
                 </div>
               </div>
