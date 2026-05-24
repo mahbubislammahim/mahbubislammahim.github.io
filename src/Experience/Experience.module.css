@@ -112,10 +112,10 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #4d94c4;
+  background: var(--theme-primary);
   flex-shrink: 0;
   border: 2px solid #fff;
-  box-shadow: 0 0 0 2px #4d94c4;
+  box-shadow: 0 0 0 2px var(--theme-primary);
 }
 
 .roleLine {
@@ -167,14 +167,14 @@
 }
 
 .link {
-  color: #2e48a3;
+  color: var(--theme-link);
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
 }
 
 .link:hover {
-  color: #2962ff;
+  color: var(--theme-link-hover);
   text-decoration: underline;
 }
 

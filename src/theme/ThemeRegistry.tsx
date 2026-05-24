@@ -6,8 +6,16 @@ import { CacheProvider } from '@emotion/react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { useState } from 'react';
+import { siteTheme } from './siteTheme';
 
 const theme = createTheme({
+  palette: {
+    primary: {
+      main: siteTheme.primary,
+      dark: siteTheme.primaryDark,
+      light: siteTheme.primaryLight,
+    },
+  },
   components: {
     MuiAppBar: {
       styleOverrides: {

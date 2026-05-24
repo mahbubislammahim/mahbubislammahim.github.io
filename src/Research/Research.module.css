@@ -49,7 +49,7 @@
   left: 0;
   width: 4px;
   height: 100%;
-  background: #4d94c4;
+  background: var(--theme-primary);
   transition: width 0.3s ease;
 }
 
@@ -73,7 +73,7 @@
   font-size: 1.35rem;
   flex-shrink: 0;
   margin-top: 2px;
-  color: #4d94c4;
+  color: var(--theme-primary);
   line-height: 1;
 }
 
@@ -107,7 +107,7 @@
 }
 
 .publicationCard:hover .publicationTitle {
-  color: #4d94c4;
+  color: var(--theme-primary);
 }
 
 .publicationDescription {
@@ -121,22 +121,22 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #4d94c4;
+  color: var(--theme-link);
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
   transition: all 0.3s ease;
   padding: 8px 16px;
   border-radius: 6px;
-  background: rgba(77, 148, 196, 0.1);
-  border: 1px solid rgba(77, 148, 196, 0.2);
+  background: rgba(var(--theme-link-rgb), 0.1);
+  border: 1px solid rgba(var(--theme-link-rgb), 0.2);
   margin-top: 10px;
   align-self: flex-start;
 }
 
 .publicationCard:hover .viewPaperLink {
-  background: rgba(77, 148, 196, 0.15);
-  border-color: rgba(77, 148, 196, 0.3);
+  background: rgba(var(--theme-link-rgb), 0.15);
+  border-color: rgba(var(--theme-link-rgb), 0.3);
   transform: translateX(5px);
 }
 

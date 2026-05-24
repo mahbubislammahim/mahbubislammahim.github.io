@@ -67,16 +67,16 @@
 }
 
 .blue {
-  border-color: #4d94c4;
-  border-top-color: #4d94c4;
+  border-color: var(--theme-primary);
+  border-top-color: var(--theme-primary);
   background: linear-gradient(135deg, #fff 0%, #f0f8ff 100%);
 }
 
 .blue:hover {
-  border-color: #4d94c4;
-  border-top-color: #4d94c4;
+  border-color: var(--theme-primary);
+  border-top-color: var(--theme-primary);
   background: linear-gradient(135deg, #fff 0%, #f0f8ff 100%);
-  box-shadow: 0 8px 40px rgba(77, 148, 196, 0.4), 0 4px 20px rgba(77, 148, 196, 0.2);
+  box-shadow: 0 8px 40px rgba(var(--theme-primary-rgb), 0.4), 0 4px 20px rgba(var(--theme-primary-rgb), 0.2);
 }
 
 .green {
@@ -175,7 +175,7 @@
 .period {
   font-size: 0.9rem;
   font-weight: 500;
-  color: #4d94c4;
+  color: var(--theme-primary);
 }
 
 .organization {

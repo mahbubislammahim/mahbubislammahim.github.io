@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   AppBar,
   Box,
@@ -18,6 +18,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 
 import styles from "./Appbar.module.css";
+import { primaryAlpha, siteTheme } from "@/src/theme/siteTheme";
 
 const navItems = [
   { name: "About", id: "about" },
@@ -28,16 +29,44 @@ const navItems = [
   { name: "Activities", id: "activities" }
 ];
 
+const APP_BAR_OFFSET = 80;
+
 export default function Appbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState(navItems[0].id);
+
+  useEffect(() => {
+    const updateActiveSection = () => {
+      const scrollPosition = window.scrollY + APP_BAR_OFFSET;
+      let current = navItems[0].id;
+
+      for (const item of navItems) {
+        const section = document.getElementById(item.id);
+        if (section && section.offsetTop <= scrollPosition) {
+          current = item.id;
+        }
+      }
+
+      setActiveSection(current);
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
+  }, []);
 
   const handleDrawerToggle = () => setMobileOpen((prev) => !prev);
 
   const scrollToSection = (sectionId: string) => {
+    setActiveSection(sectionId);
     const element = document.getElementById(sectionId);
     if (element) {
-      // Get the AppBar height (typically 64px)
-      const appBarHeight = 64;
+      const appBarHeight = APP_BAR_OFFSET;
       
       // Calculate the element's position relative to the viewport
       const elementPosition = element.getBoundingClientRect().top;
@@ -78,12 +107,20 @@ export default function Appbar() {
       <List>
         {navItems.map((item) => (
           <ListItem key={item.name} disablePadding>
-            <ListItemButton 
-              sx={{ 
+            <ListItemButton
+              selected={activeSection === item.id}
+              sx={{
                 textAlign: "center",
                 fontWeight: 600,
                 letterSpacing: "0.3px",
-                fontSize: "1rem"
+                fontSize: "1rem",
+                "&.Mui-selected": {
+                  backgroundColor: primaryAlpha(0.12),
+                  color: siteTheme.primary,
+                },
+                "&.Mui-selected:hover": {
+                  backgroundColor: primaryAlpha(0.18),
+                },
               }}
               onClick={() => scrollToSection(item.id)}
             >
@@ -138,14 +175,17 @@ export default function Appbar() {
               className={styles.list}
             >
               {navItems.map((item) => (
-                <ButtonBase 
-                  key={item.name} 
-                  className={styles.listItem} 
+                <ButtonBase
+                  key={item.name}
+                  className={`${styles.listItem} ${
+                    activeSection === item.id ? styles.listItemActive : ""
+                  }`}
                   disableRipple
+                  aria-current={activeSection === item.id ? "page" : undefined}
                   onClick={() => scrollToSection(item.id)}
                   sx={{
                     fontSize: "1rem",
-                    fontWeight: 600
+                    fontWeight: 600,
                   }}
                 >
                   {item.name}

@@ -3,6 +3,7 @@ import { GeistSans, GeistMono } from 'geist/font'
 import Script from 'next/script'
 import "./globals.css";
 import ThemeRegistry from "@/src/theme/ThemeRegistry";
+import ThemeVariables from "@/src/theme/ThemeVariables";
 
 const geistSans = GeistSans;
 const geistMono = GeistMono;
@@ -89,6 +90,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <ThemeVariables />
         <link rel="icon" href="./logo.svg?v=1" type="image/svg+xml" />
         <script
           type="application/ld+json"

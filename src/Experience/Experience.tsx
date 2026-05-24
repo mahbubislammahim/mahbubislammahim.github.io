@@ -16,7 +16,7 @@ export default function Experience() {
               </div>
               <div className={styles.companyInfo}>
                 <h2 className={styles.companyName}>Wayne State University</h2>
-                <span className={styles.companyDuration}>Aug 2026 – Present · <a href="https://gradschool.wayne.edu/students/funding/fellowships#rumble" target="_blank" rel="noopener noreferrer" className={styles.link}>Rumble Fellow</a></span>
+                <span className={styles.companyDuration}>Starting Aug 2026 · <a href="https://gradschool.wayne.edu/students/funding/fellowships#rumble" target="_blank" rel="noopener noreferrer" className={styles.link}>Rumble Fellow</a></span>
               </div>
             </div>
 
@@ -29,10 +29,10 @@ export default function Experience() {
                 <div className={styles.roleContent}>
                   <div className={styles.roleHeader}>
                     <h3 className={styles.roleTitle}>Research Fellow</h3>
-                    <span className={styles.roleDuration}>Aug 2026 – Present</span>
+                    <span className={styles.roleDuration}>Starting Aug 2026</span>
                   </div>
                   <p className={styles.roleDescription}>
-                    Conducting research in the <a href="https://sites.google.com/view/mlpa/mainpage" target="_blank" rel="noopener noreferrer" className={styles.link}>Trustworthy AI Lab</a>, focusing on
+                    Will conduct research in the <a href="https://sites.google.com/view/mlpa/mainpage" target="_blank" rel="noopener noreferrer" className={styles.link}>Trustworthy AI Lab</a>, focusing on
                     developing reliable and interpretable AI systems. Advised by
                     <a href="https://dongxiaozhu.github.io/index.html" target="_blank" rel="noopener noreferrer" className={styles.link}> Prof. Dongxiao Zhu</a>.
                   </p>

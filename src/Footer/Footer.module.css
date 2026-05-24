@@ -25,7 +25,7 @@
 }
 
 .iconLink:hover {
-  color: #1976d2;  /* MUI's default primary blue color */
+  color: var(--theme-primary);  /* MUI's default primary blue color */
   transform: translateY(-2px);
 }
 

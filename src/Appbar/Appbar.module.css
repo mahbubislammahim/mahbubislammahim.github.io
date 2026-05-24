@@ -30,7 +30,7 @@
 }
 
 .logo:hover {
-    color: #4d94c4;
+    color: var(--theme-primary);
     transform: translateY(-2px);
 }
 
@@ -65,13 +65,13 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(77, 148, 196, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(var(--theme-primary-rgb), 0.1), transparent);
     transition: left 0.5s ease;
 }
 
 .listItem:hover {
-    color: #4d94c4 !important;
-    background-color: rgba(77, 148, 196, 0.05);
+    color: var(--theme-primary) !important;
+    background-color: rgba(var(--theme-primary-rgb), 0.05);
     transform: translateY(-1px);
 }
 
@@ -84,6 +84,22 @@
     transition: all 0.1s ease;
 }
 
+.listItemActive {
+    color: var(--theme-primary) !important;
+    opacity: 1;
+}
+
+.listItemActive::after {
+    content: "";
+    position: absolute;
+    bottom: 6px;
+    left: 12px;
+    right: 12px;
+    height: 2px;
+    background-color: var(--theme-primary);
+    border-radius: 1px;
+}
+
 /* Menu button animations */
 .menuButton {
     transition: all 0.3s ease;
@@ -92,7 +108,7 @@
 }
 
 .menuButton:hover {
-    background-color: rgba(77, 148, 196, 0.1);
+    background-color: rgba(var(--theme-primary-rgb), 0.1);
     transform: scale(1.1);
 }
 

@@ -38,7 +38,7 @@
   bottom: 0;
   width: 3px;
   border-radius: 10px 0 0 10px;
-  background: linear-gradient(180deg, #5ba3d4 0%, #4d94c4 55%, #3d7aa8 100%);
+  background: linear-gradient(180deg, var(--theme-primary-muted) 0%, var(--theme-primary) 55%, var(--theme-primary-deep) 100%);
 }
 
 .intro {
@@ -123,7 +123,7 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #4d94c4;
+  background: var(--theme-primary);
   opacity: 0.65;
   box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.06);
 }
@@ -137,11 +137,11 @@
 }
 
 .platform:hover {
-  color: #4d94c4;
+  color: var(--theme-link-hover);
 }
 
 .platform:focus-visible {
-  outline: 2px solid rgba(77, 148, 196, 0.45);
+  outline: 2px solid rgba(var(--theme-link-rgb), 0.45);
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -157,20 +157,20 @@
 }
 
 .handleLink {
-  color: #3a7aa8;
+  color: var(--theme-link);
   font-weight: 600;
   text-decoration: none;
   transition: color 0.15s ease;
 }
 
 .handleLink:hover {
-  color: #4d94c4;
+  color: var(--theme-link-hover);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 .handleLink:focus-visible {
-  outline: 2px solid rgba(77, 148, 196, 0.45);
+  outline: 2px solid rgba(var(--theme-link-rgb), 0.45);
   outline-offset: 2px;
   border-radius: 2px;
 }

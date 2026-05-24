@@ -143,7 +143,7 @@
 }
 
 .activeIndicator {
-  background-color: #1976d2;
+  background-color: var(--theme-primary);
   transform: scale(1.2);
 }
 

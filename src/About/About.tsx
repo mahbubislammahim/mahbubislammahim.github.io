@@ -19,19 +19,19 @@ export default function About() {
             <div className={styles.profile}>
               <img
                 src="./prof_pic.png"
-                alt="Mahbub Islam Mahim - Research Fellow at Wayne State University"
+                alt="Mahbub Islam Mahim - joining Wayne State University in Fall 2026"
                 className={styles.image}
               />
               <div>
                 <h2 className={styles.name}>Mahbub Islam Mahim</h2>
-                <h3 className={styles.title}>Research Fellow</h3>
+                <h3 className={styles.title}>Incoming Research Fellow</h3>
                 <h3 className={styles.company}>
                   <a
                     href="https://wayne.edu/"
                     target="_blank"
                     rel="noopener"
                   >
-                    <span>Wayne State University</span>
+                    <span>Wayne State University · Fall 2026</span>
                   </a>
                 </h3>
 
@@ -105,20 +105,21 @@ export default function About() {
           <div className={styles.rightCol}>
             <div className={styles.aboutText}>
               <p className={styles.p}>
-                Hi, I'm Mahbub Islam Mahim, a Research Fellow at{" "}
+                Hi, I'm Mahbub Islam Mahim. In August 2026, I will join{" "}
                 <a
                   href="https://wayne.edu/"
                   target="_blank"
-                  style={{ color: "#2e48a3" }}
+                  className={styles.link}
                 >
                   Wayne State University
-                </a>
-                , where I research trustworthy AI and advanced machine learning.
-                Previously, I was a Senior Software Engineer at{" "}
+                </a>{" "}
+                as a Research Fellow, where I will study trustworthy AI and
+                advanced machine learning. Previously, I was a Senior Software
+                Engineer at{" "}
                 <a
                   href="https://research.samsung.com/srbd"
                   target="_blank"
-                  style={{ color: "#2e48a3" }}
+                  className={styles.link}
                 >
                   Samsung Research
                 </a>
@@ -126,7 +127,7 @@ export default function About() {
                 <a
                   href="https://www.oxfordsemantic.tech/rdfox"
                   target="_blank"
-                  style={{ color: "#2e48a3" }}
+                  className={styles.link}
                 >
                   RDFox engine
                 </a>{" "}
@@ -134,7 +135,7 @@ export default function About() {
                 <a
                   href="https://www.oxfordsemantic.tech/"
                   target="_blank"
-                  style={{ color: "#2e48a3" }}
+                  className={styles.link}
                 >
                   Oxford Semantic Technologies
                 </a>
@@ -146,7 +147,7 @@ export default function About() {
                 <a
                   href="https://juniv.edu/"
                   target="_blank"
-                  style={{ color: "#2e48a3" }}
+                  className={styles.link}
                 >
                   Jahangirnagar University
                 </a>
@@ -154,7 +155,7 @@ export default function About() {
                 <a
                   href="https://grant.most.gov.bd/en/services/most/nst-fellowship"
                   target="_blank"
-                  style={{ color: "#2e48a3" }}
+                  className={styles.link}
                 >
                   National Science and Technology Fellowship
                 </a>{" "}
