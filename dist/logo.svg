@@ -2,9 +2,9 @@
 <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#5da5d5;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#4d94c4;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#2e48a3;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#e8c56a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#c98e0e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9a6d0b;stop-opacity:1" />
     </linearGradient>
     <linearGradient id="highlightGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.4" />
