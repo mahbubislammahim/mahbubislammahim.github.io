@@ -1,107 +1,134 @@
 'use client';
 
-import '@fortawesome/fontawesome-free/css/all.min.css';
 import styles from './Research.module.css';
 
+type Publication = {
+  id: number;
+  title: string;
+  venue: string;
+  type: string;
+  description: string;
+  link: string;
+  overviewImage: string;
+  overviewAlt: string;
+};
+
 export default function Research() {
-  const publications = [
+  const publications: Publication[] = [
     {
       id: 1,
-      title: "Divide and Conquer: A Two-Stage Cascaded Framework with K-Fold Ensembling for Multi-Label Bangla Hate Speech Classification",
-      conference: "Proceedings of the Second Workshop on Bangla Language Processing (BLP-2025), ACL Anthology",
-      type: "Conference Paper",
-      description: "Published at BLP-2025 (ACL Anthology). Designed a two-stage cascaded framework with k-fold ensembling for multi-label Bangla hate speech classification, becoming champion of the shared-task and receiving the <strong>Best Paper Award</strong>.",
-      link: "https://aclanthology.org/2025.banglalp-1.39/",
-      iconClass: "fas fa-award",
+      title:
+        'Divide and Conquer: A Two-Stage Cascaded Framework with K-Fold Ensembling for Multi-Label Bangla Hate Speech Classification',
+      venue: 'BLP-2025 Workshop (ACL Anthology)',
+      type: 'Conference paper',
+      description:
+        'Champion of the BLP-2025 shared task; received the <strong>Best Paper Award</strong>. Two-stage cascaded model with k-fold ensembling for multi-label Bangla hate speech.',
+      link: 'https://aclanthology.org/2025.banglalp-1.39/',
+      overviewImage: '/publications/blp-2025.svg',
+      overviewAlt: 'Overview figure for the BLP-2025 hate speech classification paper',
     },
     {
       id: 2,
-      title: "Optimizing the Fine‑Tuning Process of Large Language Models",
-      conference: "Jahangirnagar University Journal of Electronics and Computer Science, Vol.16, June 2025",
-      type: "Journal Article",
-      description: "A comprehensive comparison of a memory-efficient fine-tuning method that combines quantization and LoRA on LLaMA-2 7B using the CodeAlpaca-20k dataset, reducing GPU memory usage from 112 GB to 10.8 GB without sacrificing performance, thereby enabling low-resource LLM deployment in real-world applications such as coding assistants.",
-      link: "https://ecs.ju-journal.org/jujecs/article/view/38",
-      iconClass: "fas fa-book",
+      title: 'Optimizing the Fine‑Tuning Process of Large Language Models',
+      venue: 'JU Journal of Electronics and Computer Science, Vol. 16, 2025',
+      type: 'Journal article',
+      description:
+        'Compares memory-efficient QLoRA-style fine-tuning on LLaMA-2 7B (CodeAlpaca-20k), reducing GPU memory from 112 GB to 10.8 GB with comparable performance.',
+      link: 'https://ecs.ju-journal.org/jujecs/article/view/38',
+      overviewImage: '/publications/llm-finetuning.svg',
+      overviewAlt: 'Overview figure for the LLM fine-tuning journal article',
     },
     {
       id: 3,
-      title: "Enhancing Wide‑Angle Image Using Narrow‑Angle View of the Same Scene",
-      conference: "arXiv preprint arXiv:2504.09455, April 2025",
-      type: "Preprint",
-      description: "Developed a GAN-based approach to enhance wide-angle images by fusing fine details from co-captured narrow-angle views, leveraging attention-based feature integration to improve visual fidelity.",
-      link: "https://arxiv.org/abs/2504.09455",
-      iconClass: "fas fa-file-alt",
+      title: 'Enhancing Wide‑Angle Image Using Narrow‑Angle View of the Same Scene',
+      venue: 'arXiv:2504.09455, April 2025',
+      type: 'Preprint',
+      description:
+        'GAN-based fusion of wide- and narrow-angle views with attention to recover detail in wide-angle images.',
+      link: 'https://arxiv.org/abs/2504.09455',
+      overviewImage: '/publications/wide-angle.svg',
+      overviewAlt: 'Overview figure for the wide-angle image enhancement preprint',
     },
- 
   ];
 
   return (
     <div className={styles.outer}>
       <div className={styles.inner}>
-        <h1 className={styles.title}>
-          Research & Publications
-        </h1>
+        <h1 className={styles.title}>Research & Publications</h1>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "ItemList",
-              "name": "Research Publications",
-              "description": "Research publications and academic papers by Mahbub Islam Mahim",
-              "itemListElement": publications.map((pub, index) => ({
-                "@type": "ScholarlyArticle",
-                "position": index + 1,
-                "name": pub.title,
-                "description": pub.description.replace(/<[^>]*>/g, ''), // Remove HTML tags
-                "url": pub.link,
-                "publisher": {
-                  "@type": "Organization",
-                  "name": pub.conference
+              '@context': 'https://schema.org',
+              '@type': 'ItemList',
+              name: 'Research Publications',
+              description: 'Research publications and academic papers by Mahbub Islam Mahim',
+              itemListElement: publications.map((pub, index) => ({
+                '@type': 'ScholarlyArticle',
+                position: index + 1,
+                name: pub.title,
+                description: pub.description.replace(/<[^>]*>/g, ''),
+                url: pub.link,
+                publisher: {
+                  '@type': 'Organization',
+                  name: pub.venue,
                 },
-                "datePublished": "2025",
-                "author": {
-                  "@type": "Person",
-                  "name": "Mahbub Islam Mahim"
-                }
-              }))
-            })
+                datePublished: '2025',
+                author: {
+                  '@type': 'Person',
+                  name: 'Mahbub Islam Mahim',
+                },
+              })),
+            }),
           }}
         />
-        
-        <div className={styles.publicationsContainer}>
-          {publications.map((publication) => (
-            <a 
-              key={publication.id} 
-              href={publication.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.publicationCard}
-            >
-              <div className={styles.publicationHeader}>
-                <i
-                  className={`${styles.publicationIcon} ${publication.iconClass}`}
-                  aria-hidden
-                />
-                <h3 className={styles.publicationTitle}>
-                  {publication.title}
-                </h3>
-              </div>
-              
-              <div className={styles.publicationMeta}>
-                <span className={styles.conference}>{publication.conference}</span>
-                <span className={styles.type}>• {publication.type}</span>
-              </div>
-              
-              <p 
-                className={styles.publicationDescription}
-                dangerouslySetInnerHTML={{ __html: publication.description }}
-              />
-              
-              <div className={styles.viewPaperLink}>
-                View Paper
-              </div>
-            </a>
+
+        <div className={styles.publicationsCard}>
+          {publications.map((publication, index) => (
+            <div key={publication.id}>
+              {index > 0 && <div className={styles.divider} aria-hidden />}
+              <article className={styles.publicationItem}>
+                <div className={styles.overview}>
+                  <img
+                    src={publication.overviewImage}
+                    alt={publication.overviewAlt}
+                    className={styles.overviewImage}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div className={styles.content}>
+                  <h3 className={styles.publicationTitle}>
+                    <a
+                      href={publication.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {publication.title}
+                    </a>
+                  </h3>
+                  <p className={styles.publicationMeta}>
+                    <span>{publication.venue}</span>
+                    <span className={styles.metaSep} aria-hidden>
+                      ·
+                    </span>
+                    <span>{publication.type}</span>
+                  </p>
+                  <p
+                    className={styles.publicationDescription}
+                    dangerouslySetInnerHTML={{ __html: publication.description }}
+                  />
+                  <a
+                    href={publication.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.paperLink}
+                  >
+                    View paper
+                  </a>
+                </div>
+              </article>
+            </div>
           ))}
         </div>
       </div>

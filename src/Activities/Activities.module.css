@@ -1,11 +1,8 @@
 .outer {
   background: #fff;
-  position: relative;
-  padding: 30px 0 30px 0;
-  z-index: 0;
+  padding: 30px 0 20px 0;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .inner {
@@ -23,325 +20,288 @@
 }
 
 .subtitle {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
   color: #666;
   line-height: 1.6;
+  max-width: 46rem;
 }
 
-.textContainer h2 {
-  margin-bottom: 0.5rem;
-}
-
-.textContainer p {
-  line-height: 1.6;
-  text-align: justify;
-}
-
-.textContainer .MuiTypography-subtitle1 {
-  /* Remove custom color */
-}
-
-.carouselContainer {
-  width: 100%;
-  margin-bottom: 1.5rem;
+.card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   overflow: hidden;
 }
 
-.carousel {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  background: white;
-}
-
-.carouselWrapper {
-  width: 100%;
-  overflow: hidden;
+/* Top bar — scrolls horizontally when there are many activities */
+.tabBarWrap {
   position: relative;
 }
 
-.carouselContent {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  will-change: transform;
-  touch-action: pan-y pinch-zoom;
-}
-
-.imageContainer {
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-  position: relative;
-  border-radius: 8px 8px 0 0;
-  touch-action: pan-y pinch-zoom;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.carouselImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.carouselImage:hover {
-  transform: scale(1.05);
-}
-
-.textContainer {
-  padding: 2rem;
-  background: white;
-}
-
-.animateText {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.5s forwards;
-  animation-delay: 0.2s;
-}
-
-.carouselControls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.controlButton {
-  padding: 8px !important;
-  border-radius: 50% !important;
-  transition: all 0.3s ease !important;
-}
-
-.controlButton:hover {
-  transform: scale(1.1);
-}
-
-.indicators {
+.tabBar {
   display: flex;
   gap: 8px;
-  padding: 0 1rem;
+  padding: 12px 44px;
+  border-bottom: 1px solid #e8e8e8;
+  background: #fbfbfb;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
 }
 
-.indicator {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #ccc;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.tabBar::-webkit-scrollbar {
+  height: 6px;
 }
 
-.indicator:hover {
-  transform: scale(1.2);
+.tabBar::-webkit-scrollbar-thumb {
+  background: #d0d0d0;
+  border-radius: 3px;
 }
 
-.activeIndicator {
-  background-color: var(--theme-primary);
-  transform: scale(1.2);
-}
-
-/* Slide animations */
-.slideleft {
-  animation: slideFromRight 0.3s ease-out;
-}
-
-.slideright {
-  animation: slideFromRight 0.3s ease-out reverse;
-}
-
-@keyframes slideFromRight {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (min-width: 768px) {
-  .carouselContent {
-    flex-direction: row;
-  }
-  
-  .imageContainer {
-    width: 50%;
-    height: 400px;
-  }
-  
-  .textContainer {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-
-.imageControls {
+.tabScrollButton {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  color: var(--theme-primary-dark);
+  line-height: 1;
+  font-size: 1.05rem;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.tabScrollButton:hover {
+  border-color: rgba(var(--theme-primary-rgb), 0.45);
+  background: rgba(var(--theme-primary-rgb), 0.08);
+}
+
+.tabScrollLeft {
+  left: 10px;
+}
+
+.tabScrollRight {
+  right: 10px;
+}
+
+.activityTab {
+  flex: 0 0 auto;
+  border: 1px solid #e3e3e3;
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  text-align: left;
+  min-width: 200px;
+  max-width: 280px;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.activityTab:hover {
+  border-color: rgba(var(--theme-primary-rgb), 0.35);
+  background: rgba(var(--theme-primary-rgb), 0.05);
+}
+
+.activeTab {
+  border-color: rgba(var(--theme-primary-rgb), 0.45);
+  background: rgba(var(--theme-primary-rgb), 0.1);
+}
+
+.tabTitle {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #2c3e50;
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tabDate {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.78rem;
+  color: #777;
+}
+
+/* Full-width content below tabs */
+.activityPanel {
+  padding: 18px;
+  display: grid;
+  grid-template-columns: 1.35fr 0.9fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.mediaColumn {
+  min-width: 0;
+}
+
+.mainImageWrap {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ececec;
+  background: #f8f8f8;
+}
+
+.mainImage {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.imageNav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 12px 20px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  gap: 10px;
+  margin-top: 10px;
 }
 
-.imageContainer:hover .imageControls {
-  opacity: 1;
+.imageNavBtn {
+  border: 1px solid #dcdcdc;
+  background: #fff;
+  color: var(--theme-primary-dark);
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 0.82rem;
+  cursor: pointer;
 }
 
-.imageControlButton {
-  color: white !important;
-  padding: 8px !important;
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  backdrop-filter: blur(4px);
-  border-radius: 50% !important;
-  transition: all 0.3s ease !important;
-}
-
-.imageControlButton:hover {
-  background-color: rgba(255, 255, 255, 0.2) !important;
-  transform: scale(1.1);
+.imageNavBtn:hover {
+  border-color: rgba(var(--theme-primary-rgb), 0.45);
+  background: rgba(var(--theme-primary-rgb), 0.08);
 }
 
 .imageCounter {
-  color: white;
-  font-size: 14px;
-  font-weight: 500;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 4px 12px;
-  border-radius: 12px;
-  backdrop-filter: blur(4px);
+  font-size: 0.82rem;
+  color: #6b7280;
+}
+
+.thumbRow {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.thumbBtn {
+  flex: 0 0 auto;
+  width: 72px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 0;
+  background: #fff;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.activeThumb {
+  border-color: var(--theme-primary);
+  box-shadow: 0 0 0 1px rgba(var(--theme-primary-rgb), 0.45);
+}
+
+.thumbImage {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.contentColumn {
+  min-width: 0;
+}
+
+.activityTitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 6px;
+  line-height: 1.45;
+}
+
+.activityDate {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0 0 10px;
+}
+
+.activityDescription {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #555;
+  margin: 0;
+  max-width: 38ch;
 }
 
 @media (max-width: 768px) {
   .outer {
-    padding: 40px 0 40px 0;
+    padding: 25px 15px 15px 15px;
   }
 
   .inner {
     width: 90%;
-    padding: 0 15px;
   }
 
   .title {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     text-align: center;
   }
 
   .subtitle {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .imageContainer {
-    height: 250px;
+  .activityTab {
+    min-width: 180px;
+    max-width: 240px;
   }
 
-  .textContainer {
-    padding: 1.5rem;
+  .activityPanel {
+    grid-template-columns: 1fr;
+    padding: 14px;
   }
 
-  .textContainer h2 {
-    font-size: 1.3rem;
+  .contentColumn {
+    border-top: 1px solid #eee;
+    padding-top: 12px;
   }
 
-  .textContainer p {
-    font-size: 0.9rem;
-  }
-
-  .carouselControls {
-    padding: 0.8rem;
-  }
-
-  .controlButton {
-    padding: 6px !important;
-  }
-
-  .indicators {
-    gap: 6px;
-  }
-
-  .indicator {
-    width: 6px;
-    height: 6px;
+  .activityDescription {
+    max-width: 100%;
   }
 }
 
 @media (max-width: 480px) {
   .outer {
-    padding: 25px 0 25px 0;
+    padding: 20px 10px 10px 10px;
   }
 
   .inner {
-    width: 100%;
-    padding: 0 20px;
+    width: 95%;
   }
 
   .title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
-  .subtitle {
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+  .tabBar {
+    padding: 10px 34px;
   }
 
-  .imageContainer {
-    height: 200px;
+  .activityTab {
+    min-width: 160px;
   }
-
-  .textContainer {
-    padding: 1rem;
-  }
-
-  .textContainer h2 {
-    font-size: 1.1rem;
-  }
-
-  .textContainer p {
-    font-size: 0.85rem;
-  }
-
-  .carouselControls {
-    padding: 0.6rem;
-  }
-
-  .controlButton {
-    padding: 4px !important;
-  }
-
-  .imageControls {
-    padding: 8px 12px;
-  }
-
-  .imageCounter {
-    font-size: 12px;
-    padding: 2px 8px;
-  }
-} 
+}

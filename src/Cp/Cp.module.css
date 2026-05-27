@@ -1,6 +1,6 @@
 .outer {
   background: #fff;
-  padding: 18px 0 20px;
+  padding: 30px 0 20px;
   display: flex;
   justify-content: center;
 }
@@ -12,124 +12,77 @@
 }
 
 .title {
-  font-size: 1.65rem;
+  font-size: 2rem;
   font-weight: 400;
   color: #313131;
-  margin: 0 0 12px;
+  margin: 0 0 15px;
   text-align: left;
-  letter-spacing: -0.02em;
 }
 
 .panel {
-  border-radius: 10px;
-  padding: 14px 16px 13px;
-  background: #fafafa;
-  border: 1px solid rgba(0, 0, 0, 0.07);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  position: relative;
-  overflow: hidden;
-}
-
-.panel::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  border-radius: 10px 0 0 10px;
-  background: linear-gradient(180deg, var(--theme-primary-muted) 0%, var(--theme-primary) 55%, var(--theme-primary-deep) 100%);
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px 30px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .intro {
-  font-size: 0.88rem;
-  line-height: 1.5;
-  color: #5c6570;
-  margin: 0 0 10px;
-  padding-left: 2px;
-  max-width: 38rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 0 0 14px;
+  max-width: 42rem;
 }
 
 .statsRow {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 6px;
-  margin: 0 0 10px;
-  padding-left: 2px;
+  gap: 18px;
+  margin: 0 0 16px;
 }
 
-.statChip {
+.statItem {
   display: inline-flex;
   align-items: baseline;
-  gap: 5px;
-  padding: 4px 9px;
-  border-radius: 7px;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9) inset;
+  gap: 6px;
 }
 
 .statNum {
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
   color: #2c3e50;
-  letter-spacing: -0.02em;
   font-variant-numeric: tabular-nums;
 }
 
 .statLbl {
-  font-size: 0.68rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: #7a8490;
+  font-size: 0.88rem;
+  color: #666;
 }
 
 .divider {
   height: 1px;
-  margin: 0 0 10px;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(0, 0, 0, 0.08) 25%,
-    rgba(0, 0, 0, 0.06) 75%,
-    transparent 100%
-  );
+  margin: 0 0 14px;
+  background: #e8e8e8;
 }
 
 .list {
-  list-style: none;
+  list-style: disc;
   margin: 0;
-  padding: 0 0 0 2px;
+  padding-left: 18px;
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 9px;
 }
 
 .list li {
-  position: relative;
-  font-size: 0.88rem;
-  line-height: 1.45;
+  font-size: 0.95rem;
+  line-height: 1.55;
   color: #3d4852;
-  padding-left: 13px;
-}
-
-.list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.55em;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--theme-primary);
-  opacity: 0.65;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.06);
 }
 
 .platform {
-  font-weight: 700;
+  font-weight: 600;
   color: #243240;
   text-decoration: none;
   margin-right: 6px;
@@ -147,7 +100,7 @@
 }
 
 .platformStatic {
-  font-weight: 700;
+  font-weight: 600;
   color: #243240;
   margin-right: 6px;
 }
@@ -177,57 +130,49 @@
 
 @media (max-width: 768px) {
   .outer {
-    padding: 16px 0 18px;
+    padding: 25px 15px 15px 15px;
   }
 
   .inner {
     width: 90%;
-    padding: 0 15px;
   }
 
   .title {
-    font-size: 1.45rem;
+    font-size: 1.8rem;
     text-align: center;
   }
 
-  .intro {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+  .panel {
+    padding: 20px;
   }
 
   .statsRow {
-    justify-content: center;
-  }
-
-  .list {
-    text-align: left;
+    gap: 14px;
   }
 }
 
 @media (max-width: 480px) {
+  .outer {
+    padding: 20px 10px 10px 10px;
+  }
+
   .inner {
-    width: 100%;
-    padding: 0 20px;
+    width: 95%;
   }
 
   .title {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
 
   .panel {
-    padding: 12px 13px 11px;
-  }
-
-  .statChip {
-    padding: 3px 7px;
+    padding: 16px;
   }
 
   .statNum {
-    font-size: 0.76rem;
+    font-size: 0.95rem;
   }
 
   .statLbl {
-    font-size: 0.62rem;
+    font-size: 0.85rem;
   }
 }

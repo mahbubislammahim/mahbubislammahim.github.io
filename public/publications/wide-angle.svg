@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="200" viewBox="0 0 320 200" role="img" aria-label="Wide-angle imaging paper overview">
+  <rect width="320" height="200" fill="#f8f8f8"/>
+  <rect x="1" y="1" width="318" height="198" fill="none" stroke="#e4e4e4"/>
+  <rect x="32" y="40" width="112" height="88" fill="#d4d4d4" rx="2"/>
+  <rect x="176" y="40" width="112" height="88" fill="#c8c8c8" rx="2"/>
+  <path d="M 144 84 L 176 84" stroke="#b0b0b0" stroke-width="2" marker-end="url(#none)"/>
+  <polygon points="160,76 176,84 160,92" fill="#b8b8b8"/>
+  <rect x="32" y="148" width="256" height="8" fill="#e6e6e6"/>
+  <rect x="32" y="164" width="200" height="8" fill="#ececec"/>
+</svg>

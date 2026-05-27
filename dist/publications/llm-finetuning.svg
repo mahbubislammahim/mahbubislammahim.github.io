@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="200" viewBox="0 0 320 200" role="img" aria-label="LLM fine-tuning paper overview">
+  <rect width="320" height="200" fill="#f8f8f8"/>
+  <rect x="1" y="1" width="318" height="198" fill="none" stroke="#e4e4e4"/>
+  <polyline points="48,120 88,88 128,96 168,64 208,72 248,48" fill="none" stroke="#c2c2c2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="48" y="132" width="224" height="8" fill="#e0e0e0"/>
+  <rect x="48" y="148" width="180" height="8" fill="#e8e8e8"/>
+  <rect x="48" y="164" width="140" height="8" fill="#ececec"/>
+  <rect x="48" y="28" width="120" height="10" fill="#dedede"/>
+</svg>

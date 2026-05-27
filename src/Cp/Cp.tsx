@@ -23,7 +23,7 @@ export default function Cp() {
 
           <div className={styles.statsRow} role="list">
             {stats.map((s) => (
-              <span key={s.l} className={styles.statChip} role="listitem">
+              <span key={s.l} className={styles.statItem} role="listitem">
                 <span className={styles.statNum}>{s.n}</span>
                 <span className={styles.statLbl}>{s.l}</span>
               </span>
@@ -43,15 +43,14 @@ export default function Cp() {
                 CodeChef
               </a>
               <span className={styles.meta}>
-                {" "}
-                1916 · 4★ ·{" "}
+                1916 · 4★ ·
                 <a
                   href="https://www.codechef.com/users/mahim47"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.handleLink}
                 >
-                  @mahim47
+                  {" @mahim47"}
                 </a>
               </span>
             </li>
@@ -65,15 +64,14 @@ export default function Cp() {
                 Codeforces
               </a>
               <span className={styles.meta}>
-                {" "}
-                1568 · Specialist ·{" "}
+                1568 · Specialist ·
                 <a
                   href="https://codeforces.com/profile/Mahim"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.handleLink}
                 >
-                  @Mahim
+                  {" @Mahim"}
                 </a>
               </span>
             </li>
