@@ -20,6 +20,7 @@ export default function Awards() {
       period: "Jul-Aug 2025",
       organization: "Samsung",
       color: "orange",
+      certificateLink: "https://drive.google.com/file/d/1ij6drvPjrX5SbFpcowwE8CELS8IJ3dNW/view?usp=sharing",
     },
     {
       id: 3,

@@ -1,6 +1,7 @@
 import Appbar from "@/src/Appbar/Appbar";
 import styles from "./page.module.css";
 import About from "@/src/About/About";
+import News from "@/src/News/News";
 import { Toolbar } from "@mui/material";
 import Experience from "@/src/Experience/Experience";
 import Cp from "@/src/Cp/Cp";
@@ -22,6 +23,9 @@ export default function Home() {
       <main>
         <section id="about" aria-label="About Mahbub Islam Mahim">
           <About/>
+        </section>
+        <section id="news" aria-label="News and Updates">
+          <News/>
         </section>
         <section id="experience" aria-label="Professional Experience">
           <Experience/>
