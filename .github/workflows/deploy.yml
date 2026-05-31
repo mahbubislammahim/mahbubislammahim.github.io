@@ -34,6 +34,7 @@ jobs:
       run: npm run build
       env:
         NODE_ENV: production
+        NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY: ${{ secrets.WEB3FORMS_ACCESS_KEY }}
         
     - name: Setup Pages
       uses: actions/configure-pages@v4

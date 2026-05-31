@@ -2,7 +2,6 @@ import React from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import {
   siteConfig,
-  formatSiteLastUpdated,
   getResumeHref,
 } from "@/app/metadata";
 import styles from "./About.module.css";
@@ -14,14 +13,17 @@ export default function About() {
   return (
     <div className={styles.outer}>
       <div className={styles.inner}>
-        <div className={styles.row}>
+        <div className={styles.card}>
+          <div className={styles.row}>
           <div className={styles.leftCol}>
             <div className={styles.profile}>
-              <img
-                src="./prof_pic.png"
-                alt="Mahbub Islam Mahim - joining Wayne State University in Fall 2026"
-                className={styles.image}
-              />
+              <figure className={styles.portrait}>
+                <img
+                  src="./prof_pic.png"
+                  alt="Mahbub Islam Mahim - joining Wayne State University in Fall 2026"
+                  className={styles.image}
+                />
+              </figure>
               <div>
                 <h2 className={styles.name}>Mahbub Islam Mahim</h2>
                 <h3 className={styles.title}>Incoming Research Fellow</h3>
@@ -94,11 +96,6 @@ export default function About() {
                     />
                   </a>
                 </div>
-                <p className={styles.lastUpdated}>
-                  <time dateTime={siteConfig.lastUpdated}>
-                    Last updated {formatSiteLastUpdated(siteConfig.lastUpdated)}
-                  </time>
-                </p>
               </div>
             </div>
           </div>
@@ -141,7 +138,6 @@ export default function About() {
                 </a>
                 , UK.
               </p>
-              <br />
               <p className={styles.p}>
                 I completed my BSc and MSc in Computer Science & Engineering at{" "}
                 <a
@@ -163,8 +159,6 @@ export default function About() {
                 at Samsung earned an <b>A1-grade patent</b>, which I’m
                 especially proud of.
               </p>
-              <br />
-              <br />
             </div>
 
             <div className={styles.aboutRow}>
@@ -216,6 +210,7 @@ export default function About() {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </div>

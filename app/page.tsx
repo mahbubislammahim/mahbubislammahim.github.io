@@ -7,6 +7,7 @@ import Experience from "@/src/Experience/Experience";
 import Cp from "@/src/Cp/Cp";
 import Footer from "@/src/Footer/Footer";
 import Activities from "@/src/Activities/Activities";
+import Contact from "@/src/Contact/Contact";
 import Research from "@/src/Research/Research";
 import Patent from "@/src/Patent/Patent";
 import Awards from "@/src/Awards/Awards";
@@ -18,7 +19,7 @@ export default function Home() {
       <Breadcrumb />
       <header>
         <Appbar/>
-        <Toolbar />
+        <Toolbar sx={{ minHeight: { xs: 52, sm: 58 }, height: { xs: 52, sm: 58 } }} />
       </header>
       <main>
         <section id="about" aria-label="About Mahbub Islam Mahim">
@@ -44,6 +45,9 @@ export default function Home() {
         </section>
         <section id="activities" aria-label="Professional Activities">
           <Activities/>
+        </section>
+        <section id="contact" aria-label="Contact">
+          <Contact/>
         </section>
       </main>
       <footer>

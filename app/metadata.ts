@@ -13,6 +13,12 @@ export const siteConfig = {
     linkedin: "https://www.linkedin.com/in/mahbub-islam-mahim-4634a5154/",
     email: "mahbubislammahim@gmail.com",
   },
+  /**
+   * Free key from https://web3forms.com (sent to your email).
+   * Safe to commit — Web3Forms keys are meant to be public in the browser.
+   * Or set NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY in .env.local / GitHub Actions secrets.
+   */
+  web3formsAccessKey: "",
   /** Served from the same deploy as `public/` → `dist/` (must be committed). */
   resumePdfFileName: "Mahbub_Islam_Mahim_Resume.pdf",
   /**

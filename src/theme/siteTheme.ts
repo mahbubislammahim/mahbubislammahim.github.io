@@ -9,6 +9,20 @@
  * 4. Update gradient stops in `public/logo.svg` if desired.
  */
 export const siteTheme = {
+  /** Page / section background (News section gray) */
+  surface: "#f9fafb",
+
+  /** Body copy and muted text (Bootstrap / academic-homepage baseline) */
+  text: "#000000",
+  textMuted: "#6c757d",
+
+  /** Main content column width */
+  layoutWidth: "78%",
+  layoutMaxWidth: "1200px",
+
+  /** Shared card corner radius */
+  cardRadius: "6px",
+
   primary: "#c98e0e",
   primaryDark: "#9a6d0b",
   primaryLight: "#e0a832",
@@ -27,6 +41,18 @@ export type SiteTheme = typeof siteTheme;
 /** CSS custom properties injected on `:root` (used by `.module.css` files). */
 export function getThemeCssVariables(): string {
   return `:root {
+  --theme-surface: ${siteTheme.surface};
+  --theme-text: ${siteTheme.text};
+  --theme-text-muted: ${siteTheme.textMuted};
+  --layout-width: ${siteTheme.layoutWidth};
+  --layout-max-width: ${siteTheme.layoutMaxWidth};
+  --card-radius: ${siteTheme.cardRadius};
+  --font-size-base: 1rem;
+  --font-size-body: 0.9375rem;
+  --font-size-sm: 0.875rem;
+  --font-size-section: 1rem;
+  --font-size-subtitle: 1.0625rem;
+  --font-size-name: 2rem;
   --theme-primary: ${siteTheme.primary};
   --theme-primary-dark: ${siteTheme.primaryDark};
   --theme-primary-light: ${siteTheme.primaryLight};

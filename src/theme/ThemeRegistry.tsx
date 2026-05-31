@@ -10,6 +10,10 @@ import { siteTheme } from './siteTheme';
 
 const theme = createTheme({
   palette: {
+    background: {
+      default: siteTheme.surface,
+      paper: "#ffffff",
+    },
     primary: {
       main: siteTheme.primary,
       dark: siteTheme.primaryDark,

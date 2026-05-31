@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   AppBar,
   Box,
@@ -26,23 +26,33 @@ const navItems = [
   { name: "Patent", id: "patent" },
   { name: "Research", id: "research" },
   { name: "Awards", id: "awards" },
-  { name: "Activities", id: "activities" }
+  { name: "Activities", id: "activities" },
+  { name: "Contact", id: "contact" },
 ];
 
-const APP_BAR_OFFSET = 80;
+const APP_BAR_OFFSET = 58;
+
+function getSectionTop(section: HTMLElement): number {
+  return section.getBoundingClientRect().top + window.scrollY;
+}
 
 export default function Appbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState(navItems[0].id);
+  const pendingSectionRef = useRef<string | null>(null);
 
   useEffect(() => {
+    let scrollEndTimer: number | undefined;
+
     const updateActiveSection = () => {
-      const scrollPosition = window.scrollY + APP_BAR_OFFSET;
+      const referenceLine = window.scrollY + APP_BAR_OFFSET;
       let current = navItems[0].id;
 
       for (const item of navItems) {
         const section = document.getElementById(item.id);
-        if (section && section.offsetTop <= scrollPosition) {
+        if (!section) continue;
+
+        if (getSectionTop(section) <= referenceLine + 1) {
           current = item.id;
         }
       }
@@ -50,12 +60,31 @@ export default function Appbar() {
       setActiveSection(current);
     };
 
+    const onScroll = () => {
+      if (pendingSectionRef.current) {
+        setActiveSection(pendingSectionRef.current);
+      } else {
+        updateActiveSection();
+      }
+
+      if (scrollEndTimer !== undefined) {
+        window.clearTimeout(scrollEndTimer);
+      }
+      scrollEndTimer = window.setTimeout(() => {
+        pendingSectionRef.current = null;
+        updateActiveSection();
+      }, 120);
+    };
+
     updateActiveSection();
-    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", updateActiveSection);
 
     return () => {
-      window.removeEventListener("scroll", updateActiveSection);
+      if (scrollEndTimer !== undefined) {
+        window.clearTimeout(scrollEndTimer);
+      }
+      window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", updateActiveSection);
     };
   }, []);
@@ -63,24 +92,18 @@ export default function Appbar() {
   const handleDrawerToggle = () => setMobileOpen((prev) => !prev);
 
   const scrollToSection = (sectionId: string) => {
+    pendingSectionRef.current = sectionId;
     setActiveSection(sectionId);
+
     const element = document.getElementById(sectionId);
     if (element) {
-      const appBarHeight = APP_BAR_OFFSET;
-      
-      // Calculate the element's position relative to the viewport
-      const elementPosition = element.getBoundingClientRect().top;
-      
-      // Calculate the current scroll position
-      const offsetPosition = elementPosition + window.pageYOffset - appBarHeight;
-      
-      // Scroll to the element with offset
+      const offsetPosition = getSectionTop(element) - APP_BAR_OFFSET;
+
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth"
+        behavior: "smooth",
       });
-      
-      // Close the mobile drawer
+
       setMobileOpen(false);
     }
   };
@@ -135,7 +158,7 @@ export default function Appbar() {
   return (
     <>
       <AppBar component="nav" position="fixed" sx={{ backgroundColor: 'transparent' }}>
-        <Toolbar className={styles.appbar}>
+        <Toolbar className={styles.appbar} disableGutters>
           <div className={styles.appbarContent}>
             <IconButton
               color="inherit"

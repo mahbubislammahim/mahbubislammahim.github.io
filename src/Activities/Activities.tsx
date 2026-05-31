@@ -55,10 +55,11 @@ export default function Activities() {
   const [showTabLeftArrow, setShowTabLeftArrow] = useState(false);
   const [showTabRightArrow, setShowTabRightArrow] = useState(false);
   const tabBarRef = useRef<HTMLDivElement | null>(null);
+  const mediaColumnRef = useRef<HTMLDivElement | null>(null);
 
   const currentActivity = activities[currentIndex];
-  const currentImage = currentActivity.images[currentImageIndex];
   const hasMultipleImages = currentActivity.images.length > 1;
+  const tabBarScrollable = showTabLeftArrow || showTabRightArrow;
 
   useEffect(() => {
     setCurrentImageIndex(0);
@@ -84,16 +85,41 @@ export default function Activities() {
     };
   }, []);
 
+  const focusMediaColumn = () => {
+    mediaColumnRef.current?.focus();
+  };
+
   const goToPreviousImage = () => {
     setCurrentImageIndex((prev) =>
       prev === 0 ? currentActivity.images.length - 1 : prev - 1
     );
+    focusMediaColumn();
   };
 
   const goToNextImage = () => {
     setCurrentImageIndex((prev) =>
       prev === currentActivity.images.length - 1 ? 0 : prev + 1
     );
+    focusMediaColumn();
+  };
+
+  const selectImage = (index: number) => {
+    setCurrentImageIndex(index);
+    focusMediaColumn();
+  };
+
+  const handleMediaKeyDown = (event: React.KeyboardEvent) => {
+    if (!hasMultipleImages) return;
+
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      goToPreviousImage();
+    }
+
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      goToNextImage();
+    }
   };
 
   const scrollTabs = (direction: "left" | "right") => {
@@ -127,7 +153,9 @@ export default function Activities() {
 
             <div
               ref={tabBarRef}
-              className={styles.tabBar}
+              className={`${styles.tabBar} ${
+                tabBarScrollable ? styles.tabBarScrollable : styles.tabBarFill
+              }`}
               role="tablist"
               aria-label="Select activity"
             >
@@ -166,63 +194,116 @@ export default function Activities() {
             aria-labelledby={`activity-tab-${currentActivity.id}`}
             className={styles.activityPanel}
           >
-            <div className={styles.mediaColumn}>
-              <div className={styles.mainImageWrap}>
-                <img
-                  src={currentImage}
-                  alt={currentActivity.title}
-                  className={styles.mainImage}
-                  loading="eager"
-                />
-              </div>
-
-              {hasMultipleImages && (
-                <>
-                  <div className={styles.imageNav}>
-                    <button
-                      type="button"
-                      onClick={goToPreviousImage}
-                      className={styles.imageNavBtn}
-                    >
-                      Previous
-                    </button>
-                    <span className={styles.imageCounter}>
-                      {currentImageIndex + 1} / {currentActivity.images.length}
-                    </span>
-                    <button
-                      type="button"
-                      onClick={goToNextImage}
-                      className={styles.imageNavBtn}
-                    >
-                      Next
-                    </button>
-                  </div>
-
+            <div
+              ref={mediaColumnRef}
+              className={styles.mediaColumn}
+              tabIndex={hasMultipleImages ? 0 : undefined}
+              onMouseEnter={focusMediaColumn}
+              onKeyDown={handleMediaKeyDown}
+            >
+              <div
+                id={`activity-carousel-${currentActivity.id}`}
+                className={styles.carousel}
+              >
+                <div className={styles.carouselInner}>
                   <div
-                    className={styles.thumbRow}
-                    role="list"
-                    aria-label="Activity images"
+                    className={styles.carouselTrack}
+                    style={{
+                      transform: `translateX(-${currentImageIndex * 100}%)`,
+                    }}
                   >
                     {currentActivity.images.map((image, index) => (
-                      <button
+                      <div
                         key={`${image}-${index}`}
-                        type="button"
-                        role="listitem"
-                        className={`${styles.thumbBtn} ${index === currentImageIndex ? styles.activeThumb : ""}`}
-                        onClick={() => setCurrentImageIndex(index)}
-                        aria-label={`View image ${index + 1}`}
+                        className={styles.carouselItem}
                       >
                         <img
                           src={image}
-                          alt=""
-                          className={styles.thumbImage}
-                          loading="lazy"
+                          alt={`${currentActivity.title} — photo ${index + 1}`}
+                          className={styles.carouselImage}
+                          loading={index === 0 ? "eager" : "lazy"}
                           decoding="async"
                         />
-                      </button>
+                      </div>
                     ))}
                   </div>
-                </>
+                </div>
+
+                {hasMultipleImages && (
+                  <>
+                    <button
+                      type="button"
+                      className={`${styles.carouselControl} ${styles.carouselControlPrev}`}
+                      onClick={goToPreviousImage}
+                      aria-label="Previous slide"
+                      data-slide="prev"
+                    >
+                      <span
+                        className={styles.carouselControlIcon}
+                        aria-hidden="true"
+                      />
+                    </button>
+                    <button
+                      type="button"
+                      className={`${styles.carouselControl} ${styles.carouselControlNext}`}
+                      onClick={goToNextImage}
+                      aria-label="Next slide"
+                      data-slide="next"
+                    >
+                      <span
+                        className={styles.carouselControlIcon}
+                        aria-hidden="true"
+                      />
+                    </button>
+
+                    <ol className={styles.carouselIndicators}>
+                      {currentActivity.images.map((_, index) => (
+                        <li key={index}>
+                          <button
+                            type="button"
+                            className={
+                              index === currentImageIndex
+                                ? styles.carouselIndicatorActive
+                                : undefined
+                            }
+                            onClick={() => selectImage(index)}
+                            aria-label={`Go to slide ${index + 1}`}
+                            aria-current={
+                              index === currentImageIndex ? "true" : undefined
+                            }
+                          />
+                        </li>
+                      ))}
+                    </ol>
+                  </>
+                )}
+              </div>
+
+              {hasMultipleImages && (
+                <div
+                  className={styles.thumbRow}
+                  role="list"
+                  aria-label="Activity images"
+                >
+                  {currentActivity.images.map((image, index) => (
+                    <button
+                      key={`${image}-${index}`}
+                      type="button"
+                      role="listitem"
+                      className={`${styles.thumbBtn} ${index === currentImageIndex ? styles.activeThumb : ""}`}
+                      onClick={() => selectImage(index)}
+                      aria-label={`View image ${index + 1}`}
+                    >
+                      <img
+                        src={image}
+                        alt=""
+                        className={styles.thumbImage}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </button>
+                  ))}
+                </div>
               )}
             </div>
 
