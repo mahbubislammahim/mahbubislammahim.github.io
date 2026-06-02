@@ -11,6 +11,7 @@ type Publication = {
   link: string;
   overviewImage: string;
   overviewAlt: string;
+  figurePdf?: string;
 };
 
 export default function Research() {
@@ -24,8 +25,9 @@ export default function Research() {
       description:
         'Champion of the BLP-2025 shared task; received the <strong>Best Paper Award</strong>. Two-stage cascaded model with k-fold ensembling for multi-label Bangla hate speech.',
       link: 'https://aclanthology.org/2025.banglalp-1.39/',
-      overviewImage: '/publications/blp-2025.svg',
+      overviewImage: '/publications/flow_chart_method-blp.png',
       overviewAlt: 'Overview figure for the BLP-2025 hate speech classification paper',
+      figurePdf: '/publications/flow_chart_method-blp.pdf',
     },
     {
       id: 2,
@@ -35,7 +37,7 @@ export default function Research() {
       description:
         'Compares memory-efficient QLoRA-style fine-tuning on LLaMA-2 7B (CodeAlpaca-20k), reducing GPU memory from 112 GB to 10.8 GB with comparable performance.',
       link: 'https://ecs.ju-journal.org/jujecs/article/view/38',
-      overviewImage: '/publications/llm-finetuning.svg',
+      overviewImage: '/publications/llm-optimized-fine-tuning.png',
       overviewAlt: 'Overview figure for the LLM fine-tuning journal article',
     },
     {
@@ -46,7 +48,7 @@ export default function Research() {
       description:
         'GAN-based fusion of wide- and narrow-angle views with attention to recover detail in wide-angle images.',
       link: 'https://arxiv.org/abs/2504.09455',
-      overviewImage: '/publications/wide-angle.svg',
+      overviewImage: '/publications/wide-angle-model-arch.png',
       overviewAlt: 'Overview figure for the wide-angle image enhancement preprint',
     },
   ];

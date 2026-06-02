@@ -384,7 +384,7 @@
   }
 
   .name {
-    font-size: 2rem;
+    font-size: var(--font-size-name);
   }
 
   .p {
@@ -455,7 +455,7 @@
   }
 
   .name {
-    font-size: 1.75rem;
+    font-size: 1.625rem;
   }
 
   .title, .company {

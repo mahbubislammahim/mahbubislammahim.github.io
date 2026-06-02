@@ -17,8 +17,8 @@ export const siteTheme = {
   textMuted: "#6c757d",
 
   /** Main content column width */
-  layoutWidth: "78%",
-  layoutMaxWidth: "1200px",
+  layoutWidth: "76%",
+  layoutMaxWidth: "1160px",
 
   /** Shared card corner radius */
   cardRadius: "6px",
@@ -52,7 +52,7 @@ export function getThemeCssVariables(): string {
   --font-size-sm: 0.875rem;
   --font-size-section: 1rem;
   --font-size-subtitle: 1.0625rem;
-  --font-size-name: 2rem;
+  --font-size-name: 1.875rem;
   --theme-primary: ${siteTheme.primary};
   --theme-primary-dark: ${siteTheme.primaryDark};
   --theme-primary-light: ${siteTheme.primaryLight};
