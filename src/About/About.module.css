@@ -1,7 +1,7 @@
 .outer {
   background: var(--theme-surface);
   position: relative;
-  padding: 30px 0 30px 0;
+  padding: 22px 0 30px 0;
   z-index: 0;
   display: flex;
   justify-content: center;
@@ -349,7 +349,7 @@
 
 @media (max-width: 768px) {
   .outer {
-    padding: 20px 0 40px 0;
+    padding: 16px 0 40px 0;
   }
 
   .inner {
@@ -437,7 +437,7 @@
 
 @media (max-width: 480px) {
   .outer {
-    padding: 15px 0 25px 0;
+    padding: 12px 0 25px 0;
   }
 
   .inner {
