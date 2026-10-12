@@ -20,20 +20,20 @@ export default function About() {
               <figure className={styles.portrait}>
                 <img
                   src="./prof_pic.png"
-                  alt="Mahbub Islam Mahim - joining Wayne State University in Fall 2026"
+                  alt="Mahbub Islam Mahim - PhD student and Research Fellow at the Trustworthy AI Lab"
                   className={styles.image}
                 />
               </figure>
               <div>
                 <h2 className={styles.name}>Mahbub Islam Mahim</h2>
-                <h3 className={styles.title}>Incoming Research Fellow</h3>
+                <h3 className={styles.title}>PhD Student &amp; Research Fellow</h3>
                 <h3 className={styles.company}>
                   <a
-                    href="https://wayne.edu/"
+                    href="https://sites.google.com/view/mlpa/mainpage"
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                   >
-                    <span>Wayne State University · Fall 2026</span>
+                    <span>Trustworthy AI Lab · Wayne State University</span>
                   </a>
                 </h3>
 
@@ -102,16 +102,28 @@ export default function About() {
           <div className={styles.rightCol}>
             <div className={styles.aboutText}>
               <p className={styles.p}>
-                Hi, I'm Mahbub Islam Mahim. In August 2026, I will join{" "}
+                Hi, I'm Mahbub Islam Mahim. I am a PhD student and Research
+                Fellow in the{" "}
+                <a
+                  href="https://sites.google.com/view/mlpa/mainpage"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.link}
+                >
+                  Trustworthy AI Lab
+                </a>{" "}
+                at{" "}
                 <a
                   href="https://wayne.edu/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className={styles.link}
                 >
                   Wayne State University
-                </a>{" "}
-                as a Research Fellow, where I will study trustworthy AI and
-                advanced machine learning. Previously, I was a Senior Software
+                </a>
+                , where I research trustworthy AI for healthcare, with a focus
+                on medical imaging.
+                Previously, I was a Senior Software
                 Engineer at{" "}
                 <a
                   href="https://research.samsung.com/srbd"
@@ -165,7 +177,8 @@ export default function About() {
               <div className={styles.interest}>
                 <div className={styles.heading}>Interests</div>
                 <ul className={styles.interestList}>
-                  <li>Trustworthy AI</li>
+                  <li>Trustworthy AI for Healthcare</li>
+                  <li>Medical Imaging</li>
                   <li>Advanced Machine Learning</li>
                   <li>Generative AI</li>
                   <li>Knowledge Graph & Semantic Reasoning</li>
@@ -175,6 +188,21 @@ export default function About() {
               <div className={styles.education}>
                 <div className={styles.heading}>Education</div>
                 <div className={styles.educationList}>
+                  <div className={styles.educationItem}>
+                    <div className={styles.educationHeader}>
+                      <i className="fas fa-graduation-cap" />
+                      <div className={styles.educationInfo}>
+                        <div className={styles.degree}>PhD Student</div>
+                        <div className={styles.university}>
+                          Wayne State University
+                        </div>
+                        <div className={styles.year}>2026 – Present</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className={styles.educationDivider} />
+
                   <div className={styles.educationItem}>
                     <div className={styles.educationHeader}>
                       <i className="fas fa-graduation-cap" />

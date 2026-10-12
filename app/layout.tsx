@@ -11,13 +11,19 @@ const geistMono = GeistMono;
 export const metadata: Metadata = {
   metadataBase: new URL("https://mahbubislammahim.github.io"),
   title: {
-    default: "Mahbub Islam Mahim - Software Engineer | Samsung Research",
+    default: "Mahbub Islam Mahim - PhD Student & Research Fellow",
     template: "%s | Mahbub Islam Mahim"
   },
-  description: "Software Engineer at Samsung Research specializing in Knowledge Graphs, Machine Learning, and AI. Award-winning researcher with A1-grade patent and publications in top-tier conferences.",
+  description: "PhD student and Research Fellow in the Trustworthy AI Lab at Wayne State University, researching trustworthy AI for healthcare and medical imaging. Former Senior Software Engineer at Samsung Research.",
   keywords: [
     "Mahbub Islam Mahim",
     "Software Engineer",
+    "PhD Student",
+    "Research Fellow",
+    "Trustworthy AI Lab",
+    "Wayne State University",
+    "Medical Imaging",
+    "Healthcare AI",
     "Samsung Research",
     "Knowledge Graph",
     "Machine Learning",
@@ -51,21 +57,21 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://mahbubislammahim.github.io/',
     siteName: 'Mahbub Islam Mahim',
-    title: 'Mahbub Islam Mahim - Software Engineer | Samsung Research',
-    description: 'Software Engineer at Samsung Research specializing in Knowledge Graphs, Machine Learning, and AI. Award-winning researcher with A1-grade patent and publications in top-tier conferences.',
+    title: 'Mahbub Islam Mahim - PhD Student & Research Fellow',
+    description: 'PhD student and Research Fellow in the Trustworthy AI Lab at Wayne State University, researching trustworthy AI for healthcare and medical imaging. Former Senior Software Engineer at Samsung Research.',
     images: [
       {
         url: '/profile.jpeg',
         width: 1200,
         height: 630,
-        alt: 'Mahbub Islam Mahim - Software Engineer at Samsung Research',
+        alt: 'Mahbub Islam Mahim - PhD student and Research Fellow at the Trustworthy AI Lab',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mahbub Islam Mahim - Software Engineer | Samsung Research',
-    description: 'Software Engineer at Samsung Research specializing in Knowledge Graphs, Machine Learning, and AI.',
+    title: 'Mahbub Islam Mahim - PhD Student & Research Fellow',
+    description: 'PhD student and Research Fellow in the Trustworthy AI Lab at Wayne State University, researching trustworthy AI for healthcare and medical imaging.',
     images: ['/profile.jpeg'],
     creator: '@mahbubislammahim',
   },
@@ -99,11 +105,16 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "Mahbub Islam Mahim",
-              "jobTitle": "Software Engineer",
+              "jobTitle": ["PhD Student", "Research Fellow"],
               "worksFor": {
-                "@type": "Organization",
-                "name": "Samsung R&D Institute Bangladesh",
-                "url": "https://research.samsung.com/srbd"
+                "@type": "EducationalOrganization",
+                "name": "Wayne State University",
+                "url": "https://wayne.edu/",
+                "department": {
+                  "@type": "Organization",
+                  "name": "Trustworthy AI Lab",
+                  "url": "https://sites.google.com/view/mlpa/mainpage"
+                }
               },
               "alumniOf": {
                 "@type": "EducationalOrganization",
@@ -124,7 +135,11 @@ export default function RootLayout({
                 "Artificial Intelligence",
                 "Software Engineering",
                 "RDFox",
-                "Semantic Reasoning"
+                "Semantic Reasoning",
+                "Trustworthy AI",
+                "Interpretable AI",
+                "Medical Imaging",
+                "Healthcare AI"
               ],
               "hasCredential": [
                 {
@@ -143,7 +158,7 @@ export default function RootLayout({
                 }
               ],
               "award": "National Science and Technology Fellowship",
-              "description": "Software Engineer at Samsung Research specializing in Knowledge Graphs, Machine Learning, and AI. Award-winning researcher with A1-grade patent and publications in top-tier conferences."
+              "description": "PhD student and Research Fellow in the Trustworthy AI Lab at Wayne State University, researching trustworthy AI for healthcare and medical imaging. Former Senior Software Engineer at Samsung Research."
             })
           }}
         />

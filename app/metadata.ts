@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 export const siteConfig = {
   name: "Mahbub Islam Mahim",
   /** ISO date (YYYY-MM-DD). Bump when you publish meaningful site updates. */
-  lastUpdated: "2026-05-24",
-  title: "Mahbub Islam Mahim - Software Engineer | Samsung Research",
-  description: "Software Engineer at Samsung Research specializing in Knowledge Graphs, Machine Learning, and AI. Award-winning researcher with A1-grade patent and publications in top-tier conferences.",
+  lastUpdated: "2026-10-12",
+  title: "Mahbub Islam Mahim - PhD Student & Research Fellow",
+  description: "PhD student and Research Fellow in the Trustworthy AI Lab at Wayne State University, researching trustworthy AI for healthcare and medical imaging. Former Senior Software Engineer at Samsung Research.",
   url: "https://mahbubislammahim.github.io/",
   ogImage: "https://mahbubislammahim.github.io/profile.jpeg",
   links: {
@@ -29,6 +29,12 @@ export const siteConfig = {
   keywords: [
     "Mahbub Islam Mahim",
     "Software Engineer",
+    "PhD Student",
+    "Research Fellow",
+    "Trustworthy AI Lab",
+    "Wayne State University",
+    "Medical Imaging",
+    "Healthcare AI",
     "Samsung Research",
     "Knowledge Graph",
     "Machine Learning",
@@ -102,7 +108,7 @@ export const defaultMetadata: Metadata = {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: `${siteConfig.name} - Software Engineer at Samsung Research`,
+        alt: `${siteConfig.name} - PhD student and Research Fellow at the Trustworthy AI Lab`,
       },
     ],
   },

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="200" viewBox="0 0 320 200" role="img" aria-labelledby="title desc">
+  <title id="title">Long-code authorship detection strategies</title>
+  <desc id="desc">A long code document divided into segments and compared through three context-coverage strategies.</desc>
+  <rect width="320" height="200" fill="#f8f8f8"/>
+  <rect x="1" y="1" width="318" height="198" fill="none" stroke="#e4e4e4"/>
+
+  <g transform="translate(24 31)">
+    <rect width="92" height="138" rx="5" fill="#ffffff" stroke="#d8d8d8"/>
+    <rect x="13" y="15" width="49" height="6" rx="3" fill="#c98e0e" opacity=".85"/>
+    <rect x="13" y="30" width="65" height="4" rx="2" fill="#c9c9c9"/>
+    <rect x="13" y="41" width="55" height="4" rx="2" fill="#d4d4d4"/>
+    <rect x="13" y="52" width="68" height="4" rx="2" fill="#c9c9c9"/>
+    <rect x="13" y="63" width="45" height="4" rx="2" fill="#d4d4d4"/>
+    <rect x="13" y="74" width="62" height="4" rx="2" fill="#c9c9c9"/>
+    <rect x="13" y="85" width="52" height="4" rx="2" fill="#d4d4d4"/>
+    <rect x="13" y="96" width="68" height="4" rx="2" fill="#c9c9c9"/>
+    <rect x="13" y="107" width="58" height="4" rx="2" fill="#d4d4d4"/>
+    <rect x="13" y="118" width="38" height="4" rx="2" fill="#c9c9c9"/>
+  </g>
+
+  <path d="M126 100h27" stroke="#b9b9b9" stroke-width="2"/>
+  <path d="m148 95 6 5-6 5" fill="none" stroke="#b9b9b9" stroke-width="2"/>
+
+  <g transform="translate(165 27)">
+    <rect width="131" height="38" rx="5" fill="#fff" stroke="#d8d8d8"/>
+    <rect x="11" y="10" width="34" height="18" rx="3" fill="#c98e0e" opacity=".25"/>
+    <rect x="49" y="10" width="34" height="18" rx="3" fill="#e4e4e4"/>
+    <rect x="87" y="10" width="33" height="18" rx="3" fill="#e4e4e4"/>
+    <text x="65.5" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#6c757d">Truncation</text>
+  </g>
+
+  <g transform="translate(165 81)">
+    <rect width="131" height="38" rx="5" fill="#fff" stroke="#c98e0e" stroke-opacity=".7"/>
+    <rect x="11" y="10" width="48" height="18" rx="3" fill="#c98e0e" opacity=".25"/>
+    <rect x="42" y="10" width="48" height="18" rx="3" fill="#c98e0e" opacity=".38"/>
+    <rect x="73" y="10" width="47" height="18" rx="3" fill="#c98e0e" opacity=".52"/>
+    <text x="65.5" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#6c757d">Multi-view</text>
+  </g>
+
+  <g transform="translate(165 135)">
+    <rect width="131" height="38" rx="5" fill="#fff" stroke="#d8d8d8"/>
+    <rect x="11" y="10" width="36" height="18" rx="3" fill="#d6c08c"/>
+    <rect x="31" y="10" width="36" height="18" rx="3" fill="#ccb16f"/>
+    <rect x="51" y="10" width="36" height="18" rx="3" fill="#c5a350"/>
+    <rect x="71" y="10" width="36" height="18" rx="3" fill="#bd9530"/>
+    <text x="65.5" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#6c757d">Sliding window</text>
+  </g>
+</svg>

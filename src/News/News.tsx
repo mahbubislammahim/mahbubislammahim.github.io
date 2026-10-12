@@ -18,10 +18,30 @@ type NewsItem = {
 
 const newsItems: NewsItem[] = [
   {
+    id: 17,
+    date: "Aug 25, 2026",
+    dateTime: "2026-08-25",
+    text: "Published a journal article on segmentation strategies for long-code authorship detection in Volume 17 of the JU Journal of Electronics and Computer Science.",
+    highlight: "Published a journal article",
+    link: "https://ecs.ju-journal.org/jujecs/article/view/63",
+    linkLabel: "View article",
+    external: true,
+  },
+  {
+    id: 16,
+    date: "Aug 2026",
+    dateTime: "2026-08",
+    text: "Started my PhD at Wayne State University and joined the Trustworthy AI Lab as a Research Fellow, researching trustworthy AI for healthcare and medical imaging.",
+    highlight: "Trustworthy AI Lab",
+    link: "https://sites.google.com/view/mlpa/mainpage",
+    linkLabel: "Visit the lab",
+    external: true,
+  },
+  {
     id: 1,
     date: "May 2026",
     dateTime: "2026-05",
-    text: "Awarded the Rumble Fellowship to join Wayne State University as Research Fellow in the Trustworthy AI Lab (Fall 2026).",
+    text: "Awarded the Rumble Fellowship to pursue PhD at Wayne State University beginning in Fall 2026.",
     highlight: "Rumble Fellowship",
     link: "https://gradschool.wayne.edu/students/funding/fellowships#rumble",
     linkLabel: "Rumble Fellowship",
